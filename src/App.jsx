@@ -1,14 +1,16 @@
 import Navigation from "./components/Navigation"
+import Footer from "./components/Footer"
 
 import { Container, Row } from "react-bootstrap"
 
 const App = () => {
 	return (
-		<Container>
-			<Row>
+		<>
+			<Container>
 				<Navigation />
-			</Row>
-		</Container>
+			</Container>
+			<Footer />
+		</>
 	)
 }
 
