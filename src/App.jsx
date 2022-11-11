@@ -1,15 +1,18 @@
-import Navigation from "./components/Navigation"
-import Footer from "./components/Footer"
+// Components
+import { Navigation } from "./components/index";
 
-import { Container, Row } from "react-bootstrap"
+// Pages
+import { Home } from "./pages/index";
+
+import { Container } from "react-bootstrap"
 
 const App = () => {
 	return (
 		<>
 			<Container>
 				<Navigation />
+				<Home />
 			</Container>
-			<Footer />
 		</>
 	)
 }
