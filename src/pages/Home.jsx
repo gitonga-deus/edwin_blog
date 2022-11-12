@@ -4,12 +4,15 @@ import { CarouselItem } from "../components";
 
 const Home = () => {
 	return (
-		<Row className="py-4 text-center">
+		<Row className="text-center">
 			<h2 style={{ fontSize: "40px", paddingBottom: "5px" }}>
 				Welcome to Githiga Self Help Group
 			</h2>
 
-			<CarouselItem />
+			<div className="py-4">
+				<CarouselItem />
+			</div>
+
 			<div className="col-sm-12" style={{ paddingTop: "40px" }}>
 				<h2>About Us</h2>
 				<p>
