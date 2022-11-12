@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-import img1 from "../../assets/img1.jpg"
-import img2 from "../../assets/img2.jpg"
-import img3 from "../../assets/img3.jpg"
+import img1 from "../../assets/carousel_1.jpg";
+import img2 from "../../assets/carousel_2.jpg"
+import img3 from "../../assets/carousel_3.jpg"
 
 const CarouselItem = () => {
 	const [index, setIndex] = useState(0);
@@ -12,18 +12,13 @@ const CarouselItem = () => {
 		setIndex(selectedIndex);
 	};
 
-	const renderCarousel = () => {
-		let result = [];
-		
-	}
-
 	return (
 		<Carousel activeIndex={index} onSelect={handleSelect} fade>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"
 					src={img1}
-					style={{ borderRadius: "10px", }}
+					style={{ borderRadius: "10px", objectFit: "cover"}}
 					height="450px"
 					alt="First slide"
 				/>
@@ -36,7 +31,7 @@ const CarouselItem = () => {
 				<img
 					className="d-block w-100"
 					src={img2}
-					style={{ borderRadius: "10px", }}
+					style={{ borderRadius: "10px", objectFit: "cover" }}
 					height="450px"
 					alt="Second slide"
 				/>
@@ -50,7 +45,7 @@ const CarouselItem = () => {
 				<img
 					className="d-block w-100"
 					src={img3}
-					style={{ borderRadius: "10px", }}
+					style={{ borderRadius: "10px", objectFit: "cover" }}
 					height="450px"
 					alt="Third slide"
 				/>

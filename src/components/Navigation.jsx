@@ -2,7 +2,7 @@ import { Nav, Navbar } from "react-bootstrap";
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "40px" }}>
+		<Navbar expand="lg" style={{ paddingTop: "30px" }}>
 			<Navbar.Brand href="#home">Githiga SHG</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse>
