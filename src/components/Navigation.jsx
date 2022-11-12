@@ -1,19 +1,23 @@
-import { Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
+
+import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
 		<Navbar expand="lg" style={{ paddingTop: "30px" }}>
-			<Navbar.Brand href="#home">Githiga SHG</Navbar.Brand>
-			<Navbar.Toggle aria-controls="basic-navbar-nav" />
-			<Navbar.Collapse>
-				<Nav className="justify-content-end" style={{ width: "100%" }}>
-					<Nav.Link href="#home">Home</Nav.Link>
-					<Nav.Link href="#home">Management</Nav.Link>
-					<Nav.Link href="#link">Our Products</Nav.Link>
-					<Nav.Link href="#link">Events</Nav.Link>
-					<Nav.Link href="#link">Contact Us</Nav.Link>
-				</Nav>
-			</Navbar.Collapse>
+			<Container>
+				<Navbar.Brand href="#home">Githiga SHG</Navbar.Brand>
+				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Collapse>
+					<Nav className="justify-content-end" style={{ width: "100%" }}>
+						<Nav.Link to="/" as={NavLink}>Home</Nav.Link>
+						<Nav.Link to="/management" as={NavLink}>Management</Nav.Link>
+						<Nav.Link to="/products" as={NavLink}>Our Products</Nav.Link>
+						<Nav.Link to="/events" as={NavLink}>Events</Nav.Link>
+						<Nav.Link to="/contact" as={NavLink}>Contact Us</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Container>
 		</Navbar>
 	);
 };
