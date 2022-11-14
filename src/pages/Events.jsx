@@ -1,8 +1,10 @@
+import { PageTitle } from "../components";
+
 const Events = () => {
 	return (
-		<div>
-			<h1>Events</h1>
-		</div>
+		<>
+			<PageTitle title="Events" />
+		</>
 	)
 }
 
