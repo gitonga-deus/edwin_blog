@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "30px" }}>
+		<Navbar expand="lg" style={{ paddingTop: "15px" }}>
 			<Container>
 				<Navbar.Brand href="#home">Githiga SHG</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />

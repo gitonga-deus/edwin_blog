@@ -1,48 +1,45 @@
-import { Row } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
+
+import { PageTitle } from "../components";
+
+import { CgProfile } from "react-icons/cg"
 
 import hero from "../../assets/carousel_1.jpg";
 
-const Person = () => {
+const Person = ({ name, rank }) => {
 	return (
-		<div className="person col-sm-3">
-			<img
-				src="https://via.placeholder.com/200"
-				alt="person"
-				className="img-fluid"
-			/>
-			<h4 className="person__name">John Doe</h4>
-			<p className="person__title">CEO</p>
-		</div>
+		<Col className="my-4" sm={3}>
+			<Card>
+				<Card.Body>
+					<CgProfile fontSize={60} style={{ height: "150px" }} />
+					<Card.Title><h4>{name}</h4></Card.Title>
+					<Card.Text>{rank}</Card.Text>
+				</Card.Body>
+			</Card>
+		</Col>
 	);
 }
 
 const Management = () => {
 	return (
 		<Row className="text-center">
-			<h2 style={{ fontSize: "40px", paddingBottom: "5px" }}>
-				Management and Staff
-			</h2>
-			<div className="team-photo py-4">
+			<PageTitle title="Management and Staff" />
+			<div className="py-4">
 				<img
 					className="d-block w-100"
 					src={hero}
 					style={{ borderRadius: "10px", objectFit: "cover" }}
 					height="450px"
-					alt="First slide"
+					alt="group photo"
 				/>
 			</div>
-			<h2 style={{ fontSize: "40px", paddingBottom: "5px" }}>
-				Meet the Team
-			</h2>
-			<Person />
-			<Person />
-			<Person />
-			<Person />
-			<Person />
-			<Person />
-			<Person />
-			<Person />
-			
+			<div style={{ paddingTop: "20px" }}>
+				<PageTitle title="Meet the team" />
+			</div>
+			<Person name="John Doe" rank="Patron" />
+			<Person name="Jane Doe" rank="Chairperson" />
+			<Person name="Jane Doe" rank="Chairperson" />
+			<Person name="John Smith" rank="Treasurer" />
 		</Row>
 	);
 };
