@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "15px" }}>
+		<Navbar expand="lg" style={{ paddingTop: "20px"}}>
 			<Container>
-				<Navbar.Brand href="#home">Githiga SHG</Navbar.Brand>
+				<Navbar.Brand href="#home">
+					Githiga SHG
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse>
 					<Nav className="justify-content-end" style={{ width: "100%" }}>

@@ -5,18 +5,17 @@ import { PageTitle } from "../components";
 
 import { CiBadgeDollar } from "react-icons/ci"
 
-const Item = ({ title }) => {
+import data from "../data.json"
+
+const Item = ({ product }) => {
 	return (
 		<Col className="my-4" sm={4}>
 			<Card>
 				<CardHeader className="p-3" style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
 					<CiBadgeDollar fontSize={50} />
-					<h4>{title}</h4>
+					<h4>{product.loanType}</h4>
 				</CardHeader>
-				<p className="p-3">
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, ea?
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, ea?
-				</p>
+				<p className="p-3">{product.description}</p>
 			</Card>
 		</Col>
 	)
@@ -24,15 +23,36 @@ const Item = ({ title }) => {
 
 
 const Products = () => {
+
+	const { products, loanApplication } = data;
+
+	const renderProducts = () => {
+		let result = [];
+		products.map((product, index) => {
+			result.push(<Item key={index} product={product} />)
+		})
+		return result;
+	};
+
+	const renderLoanApplication = () => {
+		let result = [];
+		loanApplication.map((application, index) => {
+			result.push(
+				<ul className="m-2" key={index}>
+					<li>{application}</li>
+				</ul>
+			)
+		})
+		return result;
+	}
+
 	return (
 		<>
-			<PageTitle title="Our Products" />
 			<Row>
-				{["Development Loans", "Education Loans", "Emergency Loans", "Business Loans", "AgriBusiness Loan", "Church Loan"].map(
-					(item, i) => (
-						<Item title={item} key={i} />
-					)
-				)}
+				<PageTitle title="Our Products" />
+				{renderProducts()}
+				<PageTitle title="How to Apply" />
+				{renderLoanApplication()}
 			</Row>
 		</>
 	)

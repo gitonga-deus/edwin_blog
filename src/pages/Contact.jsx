@@ -1,15 +1,13 @@
 import { Col, Row } from "react-bootstrap"
 
-import { PageTitle, ContactForm } from "../components"
+import { PageTitle, ContactForm,  } from "../components"
 
 import { BsChatDots, BsTelephone } from "react-icons/bs"
 import { SlLocationPin } from "react-icons/sl"
 
 const Contact = () => {
 	return (
-		<div style={{
-			fontSize: "16px"
-		}}>
+		<div className="py-4">
 			<PageTitle title="Get in Touch" />
 			<Row style={{
 				margin: "5px",

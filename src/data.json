@@ -1,0 +1,23 @@
+{
+	"products": [
+		{
+			"loanType": "Development Loan",
+			"description": "This is an all-purpose loan granted to all members individually to finance development projects"
+		},
+		{
+			"loanType": "Emergency Loan",
+			"description": "This is a loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+		},
+		{
+			"loanType": "Education Loan",
+			"description": "This is a loan granted to members to finance education needs e.g tuition fees, books and related expenses"
+		}
+	],
+	"loanApplication": [
+		"Fill in loan application form",
+		"Return loan form for appraisal and approval",
+		"Pay loan insurance fund of 1% of approved loan",
+		"Collect loan cheque",
+		"Start paying loan promptly after a Grace period of one month."
+	]
+}

@@ -1,14 +1,16 @@
 const Footer = () => {
 	return (
-		<footer id="sticky-footer" className="flex-shrink-0 py-4 text-white footer" style={{
-			position: "fixed",
-			bottom: "0",
-			width: "100%",
-			backgroundColor: "#661111"
+		<footer className="text-center py-4 text-white" style={{
+			backgroundColor: "#661111",
+			fontSize: "15px",
+			alignItems: "center"
 		}}>
-			<div className="container text-center">
-				<small>Copyright &copy; Githiga Self Help Group</small>
-			</div>
+			<p style={{
+				margin: "0"
+			}}>
+				&copy; {new Date().getFullYear()} -
+				Githiga Self Help Group
+			</p>
 		</footer>
 	)
 }
