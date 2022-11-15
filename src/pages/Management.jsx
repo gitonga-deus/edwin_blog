@@ -22,7 +22,7 @@ const Person = ({ name, rank }) => {
 
 const Management = () => {
 	return (
-		<Row className="text-center">
+		<Row>
 			<PageTitle title="Management and Staff" />
 			<div className="py-4">
 				<img
@@ -33,9 +33,9 @@ const Management = () => {
 					alt="group photo"
 				/>
 			</div>
-			<div style={{ paddingTop: "20px" }}>
-				<PageTitle title="Meet the team" />
-			</div>
+			<div style={{ paddingTop: "20px" }} />
+			<PageTitle title="Meet the team" />
+
 			<Person name="John Doe" rank="Patron" />
 			<Person name="Jane Doe" rank="Chairperson" />
 			<Person name="Jane Doe" rank="Chairperson" />

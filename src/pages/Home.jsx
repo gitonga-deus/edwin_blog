@@ -32,16 +32,14 @@ const Home = () => {
 				<CarouselItem />
 			</div>
 
+			<PageTitle title="Who are We" />
 			<div className="col-sm-12" style={{ paddingTop: "20px" }}>
-				<PageTitle title="Who are We" />
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum ante eu mi dapibus dignissim. Pellentesque nec mi malesuada, dignissim lectus sed, finibus lorem.Pellentesque fermentum ante eu mi dapibus dignissim. Pellentesque nec mi malesuada, dignissim lectus sed, finibus lorem.
+					Sed faucibus sagittis mi fermentum ante iaculis arcu mollis ullamcorper. Ut eu ornare dui. Phasellus justo purus, porttitor.
 				</p>
 				<p>
-					Sed faucibus sagittis mi fermentum ante iaculis arcu mollis ullamcorper. Ut eu ornare dui. Phasellus justo purus, porttitor. Phasellus justo purus, porttitor.Pellentesque fermentum ante eu mi dapibus dignissim. Pellentesque nec mi malesuada, dignissim lectus sed, finibus lorem.
-				</p>
-				<p>
-
+					Phasellus justo purus, porttitor.Pellentesque fermentum ante eu mi dapibus dignissim. Pellentesque nec mi malesuada, dignissim lectus sed, finibus lorem.
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fermentum ante eu mi dapibus dignissim. Pellentesque nec mi malesuada, dignissim lectus sed, finibus lorem.
 				</p>
 			</div>

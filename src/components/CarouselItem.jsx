@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-import img1 from "../../assets/carousel_1.jpg";
 import img2 from "../../assets/carousel_2.jpg"
 import img3 from "../../assets/carousel_3.jpg"
 
@@ -14,19 +13,6 @@ const CarouselItem = () => {
 
 	return (
 		<Carousel activeIndex={index} onSelect={handleSelect} fade>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src={img1}
-					style={{ borderRadius: "10px", objectFit: "cover"}}
-					height="450px"
-					alt="First slide"
-				/>
-				<Carousel.Caption>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
 			<Carousel.Item>
 				<img
 					className="d-block w-100"

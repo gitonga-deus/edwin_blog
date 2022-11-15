@@ -2,15 +2,15 @@
 	"products": [
 		{
 			"loanType": "Development Loan",
-			"description": "This is an all-purpose loan granted to all members individually to finance development projects"
+			"description": "An all-purpose loan granted to all members individually or corporates to finance development projects"
 		},
 		{
 			"loanType": "Emergency Loan",
-			"description": "This is a loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+			"description": "A loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
 		},
 		{
 			"loanType": "Education Loan",
-			"description": "This is a loan granted to members to finance education needs e.g tuition fees, books and related expenses"
+			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
 		}
 	],
 	"loanApplication": [
@@ -19,5 +19,31 @@
 		"Pay loan insurance fund of 1% of approved loan",
 		"Collect loan cheque",
 		"Start paying loan promptly after a Grace period of one month."
+	],
+	"paymentChannels": [
+		{
+			"name": "GDC",
+			"accountName": "Account Name",
+			"accountNumber": "0123 9234 8345 7456",
+			"branch": "Githiga"
+		},
+		{
+			"name": "Caritas MFB",
+			"accountName": "Account Name",
+			"accountNumber": "0123 9234 8345 7456",
+			"branch": "Githiga"
+		},
+		{
+			"name": "KCB",
+			"accountName": "Account Name",
+			"accountNumber": "0123 9234 8345 7456",
+			"branch": "Githiga"
+		},
+		{
+			"name": "MPESA",
+			"accountName": "Member's Number",
+			"accountNumber": "Paybill No: 123 456",
+			"branch": "--"
+		}
 	]
 }

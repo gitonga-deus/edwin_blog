@@ -2,7 +2,9 @@ import { Col } from "react-bootstrap";
 
 const PageTitle = ({ title }) => {
 	return (
-		<Col sm={12} className="p-3 m-2 text-center w-100">
+		<Col sm={12} className="p-1 text-left w-100" style={{
+			marginLeft: "5px"
+		}}>
 			<h2>{title}</h2>
 		</Col>
 	)
