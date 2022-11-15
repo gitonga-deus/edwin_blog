@@ -1,10 +1,10 @@
 /* @import url('https://fonts.cdnfonts.com/css/product-sans'); */
 /* @import url('https://fonts.cdnfonts.com/css/isidora'); */
-/* @import url('https://fonts.cdnfonts.com/css/capriola'); */
-@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/capriola');
+/* @import url('https://fonts.cdnfonts.com/css/satoshi'); */
 /* @import url('https://fonts.cdnfonts.com/css/montserrat'); */
 /* @import url('https://fonts.cdnfonts.com/css/inter'); */
-@import url('https://fonts.cdnfonts.com/css/google-sans');
+/* @import url('https://fonts.cdnfonts.com/css/google-sans'); */
 
 html,
 body {
@@ -14,11 +14,11 @@ body {
 	color: #000;
 	/* font-family: "Isidora", sans-serif; */
 	/* font-family: "Product Sans", sans-serif; */
-	/* font-family: "Capriola", sans-serif; */
+	font-family: "Capriola", sans-serif;
 	/* font-family: "Montserrat", sans-serif; */
 	/* font-family: "Inter", sans-serif; */
 	/* font-family: "Satoshi", sans-serif; */
-	font-family: "Google Sans", sans-serif;
+	/* font-family: "Google Sans", sans-serif; */
 	font-size: 16px;
 
 }
