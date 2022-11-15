@@ -10,9 +10,9 @@ const Item = ({ title }) => {
 	return (
 		<Col className="my-4" sm={4}>
 			<Card>
-				<CardHeader className="p-3" style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
-					<SlRocket fontSize={40} />
-					<h4 className="py-2">{title}</h4>
+				<CardHeader style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
+					{/* <SlRocket fontSize={40} /> */}
+					<h5 className="py-2 text-uppercase">{title}</h5>
 				</CardHeader>
 				<p className="p-3">
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, ea?

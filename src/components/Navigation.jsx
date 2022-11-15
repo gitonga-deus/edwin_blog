@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "20px"}}>
+		<Navbar expand="lg" style={{ paddingTop: "20px" }}>
 			<Container>
 				<Navbar.Brand href="#home">
-					Githiga SHG
+					<h3>Githiga SHG</h3>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse>
-					<Nav className="justify-content-end" style={{ width: "100%" }}>
+					<Nav className="justify-content-end text-uppercase" style={{ width: "100%" }}>
 						<Nav.Link to="/" as={NavLink}>Home</Nav.Link>
 						<Nav.Link to="/management" as={NavLink}>Management</Nav.Link>
 						<Nav.Link to="/products" as={NavLink}>Products</Nav.Link>
