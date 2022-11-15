@@ -11,6 +11,18 @@
 		{
 			"loanType": "Education Loan",
 			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
+		},
+		{
+			"loanType": "Development Loan",
+			"description": "An all-purpose loan granted to all members individually or corporates to finance development projects"
+		},
+		{
+			"loanType": "Emergency Loan",
+			"description": "A loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+		},
+		{
+			"loanType": "Education Loan",
+			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
 		}
 	],
 	"loanApplication": [

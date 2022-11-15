@@ -18,7 +18,7 @@ const CarouselItem = () => {
 					className="d-block w-100"
 					src={img2}
 					style={{ borderRadius: "10px", objectFit: "cover" }}
-					height="450px"
+					height="400px"
 					alt="Second slide"
 				/>
 
