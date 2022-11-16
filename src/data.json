@@ -1,4 +1,69 @@
 {
+	"management": [
+		{
+			"name": "Henry Kiritu",
+			"rank": "Patron",
+			"emailAddress": "",
+			"phone_no": "",
+			"description": "He is the Patron of the group. He gives the pastoral direction of the group. He is also a mandatory signature of all financial transaction. He has been very instrumental in promotion and guidance of the group"
+		},
+		{
+			"name": "James Makena Wanyangi",
+			"rank": "Chairman",
+			"emailAddress": "makenaj2@gmail.com",
+			"phone_no": "+254 722 252 068",
+			"description": "He chairs all the group meetings and represents the Self-help in all stairs of governance hierarchy. He is an expert in governance and leadership with very wide experience in financial institutions especially SACCOS. He holds a Bachelor's Degree in Public Administration & Governance, a Diploma in Social Development, and a Certificate in Animal Health. He is also an accredited professional mediator and practises mediation, both court annexed and private"
+		},
+		{
+			"name": "Kennedy Ngoro Mutugi",
+			"rank": "Vice Chairman",
+			"emailAddress": "",
+			"phone_no": "",
+			"description": "He holds a Diploma in Computer Management, Service & Repair and a Certificate in Electronic Science. Currently operates a service business with an electronic's workshop. In the group, he chairs Capacity Building Committee which deals with member's education and business development."
+		},
+		{
+			"name": "Hannah Wanjiru Ng'ang'a",
+			"rank": "Treasurer",
+			"emailAddress": "wanjiruhannah665@gmail.com",
+			"phone_no": "",
+			"description": "She holds a Diploma in Clearing and Forwarding and has also done 10 Computer Packages. As a treasurer, she is the custodian of all group's assets both physical and financial. She also chairs the committee of Finance and Budget."
+		},
+		{
+			"name": "Esther Njeri Kinyuru",
+			"rank": "Secretary",
+			"emailAddress": "",
+			"phone_no": "",
+			"description": "She holds a diploma in Early Childhood Development. Currently a full time ECD teacher. As secretary, she writes and documents all the groups deliberations and resolutions. She also chairs the committee of Risk, Audit & Compliance."
+		},
+		{
+			"name": "Peter Mbugua Matiru",
+			"rank": "",
+			"emailAddress": "petrinel2012@gmail.com",
+			"phone_no": "+254 727 525 648",
+			"description": "He holds a Bachelor's Degree in Philosophy and a Certificate in Teaching. He is the Secretary to Budget & Finance Committee as well as a member to Risk, Audit & Compliance Committee."
+		},
+		{
+			"name": "Samuel Ngure Mburu",
+			"rank": "+254 722 876 992",
+			"emailAddress": "samuelnguremburu@gmail.com",
+			"phone_no": "",
+			"description":"He is a seasonal artisan in Building and Construction. He is a member of Capacity Building Committee and Finance & Budget"
+		},
+		{
+			"name": "John Maingi Kimani",
+			"rank": "+254 727 900 354",
+			"emailAddress":"",
+			"phone_no": "",
+			"description": "He operates a tailoring business and has attended several marketing seminars and workshops. He is a member of Committee on Capacity Building and Risk, Audit & Compliance."
+		},
+		{
+			"name": "Samuel Kamau Kanini",
+			"rank": "Accountant",
+			"emailAddress":"",
+			"phone_no": "+254 720 996 911",
+			"description": "He is a CPA-K Profession. He oversees the operations of the group including Finances, Promotion, and Customer Service. He is also the "
+		}
+	],
 	"products": [
 		{
 			"loanType": "Development Loan",
