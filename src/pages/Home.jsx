@@ -6,8 +6,6 @@ import CardHeader from "react-bootstrap/esm/CardHeader";
 
 import { SlRocket } from "react-icons/sl"
 
-import data from "../data.json";
-
 const Item = ({ title, content }) => {
 	return (
 		<Col className="my-4" sm={4} md={4}>
@@ -48,8 +46,8 @@ const Home = () => {
 					Membership is drawn from all regions, including the diaspora as make the best use of technology
 				</p>
 			</div>
-			<Item title="Vision" content="To be the preferred community-based financial service provider." />
 			<Item title="Mission" content="To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles." />
+			<Item title="Vision" content="To be the preferred community-based financial service provider." />
 			<Item title="Values" content="Accountability, Honesty, Integrity, Transparency, and Teamwork" />
 		</Row >
 	)
