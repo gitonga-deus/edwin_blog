@@ -61,7 +61,7 @@ const Products = () => {
 							<CiBadgeDollar fontSize={50} />
 							<h4>{channel.name}</h4>
 						</CardHeader>
-						<div className="p-1">
+						<div className="p-3">
 							<p>A/C Name: {channel.accountName}</p>
 							<p>A/C No: {channel.accountNumber}</p>
 							<span>Branch: {channel.branch}</span>
@@ -77,7 +77,7 @@ const Products = () => {
 		<>
 			<Row>
 				<PageTitle title="Our Products" />
-				<p> <strong>NOTE:</strong> Members are entitled to different loans but will limited to only one type of loan product at any given time.</p>
+				<p className="text-center"> <strong>NOTE:</strong> Members are entitled to different loans but will limited to only one type of loan product at any given time.</p>
 				{renderProducts()}
 				<PageTitle title="How to Apply" />
 				{renderLoanApplication()}

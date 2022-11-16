@@ -24,9 +24,9 @@ const Events = () => {
 					</div>
 				</div>
 			</Col>
-			{[1, 2, 3, 4].map((i) => {
+			{[1, 2, 3, 4].map((item, i) => {
 				return (
-					<Col sm={6} className="py-4 my-2">
+					<Col sm={6} className="py-4 my-2" key={i}>
 						<div className="img-wrapper">
 							<img src={event} alt="Recent Event" className="d-block w-100 img-event" height="300px" style={{ borderRadius: "10px", objectFit: "cover" }} />
 							<div className="img-overlay p-3">
