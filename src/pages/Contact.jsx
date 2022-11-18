@@ -23,7 +23,7 @@ const Contact = () => {
 	});
 
 	const sendEmail = (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		send(
 			"service_erwc4km",
 			"template_gzb4ssv",
@@ -34,6 +34,8 @@ const Contact = () => {
 		}).catch((err) => {
 			alert("Email failed to send.", err);
 		});
+
+		// setToSend({ " sender_name": "", "sender_mobile": "", "sender_email": "", "message": "" });
 	}
 
 	const handleChange = (e) => {
