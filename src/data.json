@@ -1,16 +1,4 @@
 {
-	"home_slider": [
-		{
-			"img": "../assets/img1.jpg",
-			"label": "First Slide Label",
-			"caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-		},
-		{
-			"img": "../assets/img2.jpg",
-			"label": "Second Slide Label",
-			"caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-		}
-	],
 	"management": [
 		{
 			"name": "Henry Kiritu",
