@@ -1,6 +1,6 @@
 import { Row, Col, Card } from "react-bootstrap"
 
-import { CarouselItem, PageTitle } from "../components";
+import { PageTitle, Slider } from "../components";
 
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
@@ -28,7 +28,7 @@ const Home = () => {
 			<PageTitle title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
 
 			<div className="py-4">
-				<CarouselItem />
+				<Slider />
 			</div>
 
 			<PageTitle title="Who are We" />

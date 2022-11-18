@@ -4,7 +4,7 @@ import { PageTitle } from "../components";
 
 import { CgProfile } from "react-icons/cg"
 
-import hero from "../../assets/carousel_1.jpg";
+import hero from "../../assets/img1.jpg";
 
 import data from "../data.json";
 

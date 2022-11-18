@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "20px" }}>
+		<Navbar expand="lg" style={{ alignItems: "center" }} position="sticky">
 			<Container>
 				<Navbar.Brand href="/">
 					<img src={logo} alt="Githiga SHG Logo" />

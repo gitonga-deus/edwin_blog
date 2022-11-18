@@ -10,16 +10,19 @@ import data from "../data.json"
 const Item = ({ product }) => {
 	return (
 		<Col className="my-4" sm={4}>
-			<Card style={{
-				height: "auto"
-			}}>
-				<CardHeader className="p-3" style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
-					<CiBadgeDollar fontSize={50} />
-					<h4>{product.loanType}</h4>
-				</CardHeader>
-				<p className="p-3">{product.description}</p>
-			</Card>
-		</Col>
+			<div className="p-2 text-center">
+				<Card style={{
+					height: "auto"
+				}}>
+
+					<CardHeader className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
+						<CiBadgeDollar fontSize={50} />
+						<h4>{product.loanType}</h4>
+					</CardHeader>
+					<p className="p-3">{product.description}</p>
+				</Card>
+			</div>
+		</Col >
 	)
 }
 
@@ -76,8 +79,11 @@ const Products = () => {
 	return (
 		<>
 			<Row>
-				<PageTitle title="Our Products" />
-				<p className="text-center"> <strong>NOTE:</strong> Members are entitled to different loans but will limited to only one type of loan product at any given time.</p>
+				<PageTitle title="Loan Products" />
+				<p className="text-center">
+					<strong>NOTE:</strong>
+					Members are entitled to different loans but will limited to only one type of loan product at any given time.
+				</p>
 				{renderProducts()}
 				<PageTitle title="How to Apply" />
 				{renderLoanApplication()}
