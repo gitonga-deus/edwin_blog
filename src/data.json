@@ -1,4 +1,16 @@
 {
+	"home_slider": [
+		{
+			"img": "../assets/img1.jpg",
+			"label": "First Slide Label",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		},
+		{
+			"img": "../assets/img2.jpg",
+			"label": "Second Slide Label",
+			"caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+		}
+	],
 	"management": [
 		{
 			"name": "Henry Kiritu",
@@ -47,19 +59,19 @@
 			"rank": "+254 722 876 992",
 			"emailAddress": "samuelnguremburu@gmail.com",
 			"phone_no": "",
-			"description":"He is a seasonal artisan in Building and Construction. He is a member of Capacity Building Committee and Finance & Budget"
+			"description": "He is a seasonal artisan in Building and Construction. He is a member of Capacity Building Committee and Finance & Budget"
 		},
 		{
 			"name": "John Maingi Kimani",
 			"rank": "+254 727 900 354",
-			"emailAddress":"",
+			"emailAddress": "",
 			"phone_no": "",
 			"description": "He operates a tailoring business and has attended several marketing seminars and workshops. He is a member of Committee on Capacity Building and Risk, Audit & Compliance."
 		},
 		{
 			"name": "Samuel Kamau Kanini",
 			"rank": "Accountant",
-			"emailAddress":"",
+			"emailAddress": "",
 			"phone_no": "+254 720 996 911",
 			"description": "He is a CPA-K Profession. He oversees the operations of the group including Finances, Promotion, and Customer Service. He is also the "
 		}
@@ -78,16 +90,16 @@
 			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
 		},
 		{
-			"loanType": "Development Loan",
-			"description": "An all-purpose loan granted to all members individually or corporates to finance development projects"
+			"loanType": "Business Loan",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
 		},
 		{
-			"loanType": "Emergency Loan",
-			"description": "A loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+			"loanType": "Agribusiness Loan",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
 		},
 		{
-			"loanType": "Education Loan",
-			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
+			"loanType": "Church Loan",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
 		}
 	],
 	"loanApplication": [

@@ -2,7 +2,7 @@ import { Row, Col, Button } from "react-bootstrap";
 
 import { PageTitle } from "../components";
 
-import event from "../../assets/carousel_3.jpg"
+import event from "../../assets/img1.jpg"
 
 const Events = () => {
 

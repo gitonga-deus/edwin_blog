@@ -1,13 +1,15 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 
+import logo from "../../assets/logo/logo.png"
+
 import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
 	return (
-		<Navbar expand="lg" style={{ paddingTop: "20px" }}>
+		<Navbar expand="lg" style={{ alignItems: "center" }} position="sticky">
 			<Container>
-				<Navbar.Brand href="#home">
-					<h3>Githiga SHG</h3>
+				<Navbar.Brand href="/">
+					<img src={logo} alt="Githiga SHG Logo" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse>
