@@ -10,9 +10,9 @@ import data from "../data.json"
 const Item = ({ product }) => {
 	return (
 		<Col className="my-4" sm={4}>
-			<div className="p-2 text-center">
+			<div className="p-1 text-center">
 				<Card style={{
-					height: "auto"
+					height: "250px"
 				}}>
 
 					<CardHeader className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
@@ -32,8 +32,8 @@ const Products = () => {
 
 	const renderProducts = () => {
 		let result = [];
-		products.map((product, index) => {
-			result.push(<Item key={index} product={product} />)
+		products.map((product, i) => {
+			result.push(<Item key={i} product={product} />)
 		})
 		return result;
 	};
@@ -54,9 +54,9 @@ const Products = () => {
 
 	const renderPaymentChannel = () => {
 		let result = [];
-		paymentChannels.map((channel, index) => {
+		paymentChannels.map((channel, idx) => {
 			result.push(
-				<Col className="my-4" sm={3}>
+				<Col className="my-4" sm={3} key={idx}>
 					<Card style={{
 						height: "auto"
 					}}>
@@ -67,7 +67,6 @@ const Products = () => {
 						<div className="p-3">
 							<p>A/C Name: {channel.accountName}</p>
 							<p>A/C No: {channel.accountNumber}</p>
-							<span>Branch: {channel.branch}</span>
 						</div>
 					</Card>
 				</Col>

@@ -71,23 +71,23 @@
 		},
 		{
 			"loanType": "Emergency Loan",
-			"description": "A loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+			"description": "This loan granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
 		},
 		{
 			"loanType": "Education Loan",
-			"description": "A loan granted to members to finance education needs e.g tuition fees, books and related expenses"
+			"description": "This loan granted to members to finance education needs e.g tuition fees, books and related expenses"
 		},
 		{
 			"loanType": "Business Loan",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
+			"description": "This loan product designed to finance trading activities. The loan shall be advanced to ongoing businesses only"
 		},
 		{
 			"loanType": "Agribusiness Loan",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
+			"description": "This loan is granted for agricultural purposes aimed at promoting agriculture for food security, improved livelihoods, e.t.c"
 		},
 		{
 			"loanType": "Church Loan",
-			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, tenetur."
+			"description": "This loan is granted to Catholic Churches only through the Parish pastoral."
 		}
 	],
 	"loanApplication": [
@@ -101,26 +101,22 @@
 		{
 			"name": "GDC",
 			"accountName": "Account Name",
-			"accountNumber": "0123 9234 8345 7456",
-			"branch": "Githiga"
+			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
 			"name": "Caritas MFB",
 			"accountName": "Account Name",
-			"accountNumber": "0123 9234 8345 7456",
-			"branch": "Githiga"
+			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
 			"name": "KCB",
 			"accountName": "Account Name",
-			"accountNumber": "0123 9234 8345 7456",
-			"branch": "Githiga"
+			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
 			"name": "MPESA",
 			"accountName": "Member's Number",
-			"accountNumber": "Paybill No: 123 456",
-			"branch": "--"
+			"accountNumber": "Paybill No: 123 456"
 		}
 	]
 }
