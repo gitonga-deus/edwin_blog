@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Card, Button } from "react-bootstrap";
 
 import { PageTitle } from "../components";
 
@@ -29,37 +29,29 @@ const Events = () => {
 			.catch(console.error);
 	}, []);
 
-	// const handleClick = () => {
-	// 	alert("You clicked the button!");
-	// }
-
 	return (
 		<Row>
 			<PageTitle title="Events" />
-			<Col sm={6} md={6} lg={6}>
-				{post && post.map((post, index) => (
-					<article>
+			{post && post.map((post, index) => (
+				<Col sm={12} md={12} lg={6} className="p-4" key={index}>
+					<Card style={{ borderRadius: "5px" }}>
 						<Link to={"/event/" + post.slug.current} key={post.slug.current}>
-							<span key={index}>
+							<span >
 								<img
-									style={{
-										width: "800px",
-										height: "500px",
-										objectFit: "cover",
-										backgroundPosition: "center",
-									}}
+									className="d-block w-100 mb-3 events-img"
+									style={{ objectFit: "cover", height: "300px" }}
 									src={post.mainImage.asset.url}
 									alt={post.mainImage.alt}
 								/>
-								<span>
-									<h3>{post.title}</h3>
-								</span>
+							</span>
+							<span className="text-black events-title">
+								<h3>{post.title}</h3>
 							</span>
 						</Link>
-					</article>
-				))}
-			</Col>
-		</Row>
+					</Card>
+				</Col>
+			))}
+		</Row >
 	)
 }
 

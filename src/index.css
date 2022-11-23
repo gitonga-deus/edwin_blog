@@ -1,10 +1,4 @@
-/* @import url('https://fonts.cdnfonts.com/css/product-sans'); */
-/* @import url('https://fonts.cdnfonts.com/css/isidora'); */
 @import url('https://fonts.cdnfonts.com/css/roboto');
-/* @import url('https://fonts.cdnfonts.com/css/satoshi'); */
-/* @import url('https://fonts.cdnfonts.com/css/montserrat'); */
-/* @import url('https://fonts.cdnfonts.com/css/inter'); */
-/* @import url('https://fonts.cdnfonts.com/css/google-sans'); */
 
 html,
 body {
@@ -12,40 +6,32 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	color: #000;
-	/* font-family: "Product Sans", sans-serif; */
 	font-family: "Roboto Medium", sans-serif;
-	/* font-family: "Montserrat", sans-serif; */
-	/* font-family: "Inter", sans-serif; */
-	/* font-family: "Satoshi", sans-serif; */
-	/* font-family: "Google Sans", sans-serif; */
 	font-size: 15px;
+	line-height: 1.5;
 	font-weight: 400;
 }
 
-.img-wrapper {
-	position: relative;
+a {
+	text-decoration: none;
 }
 
-.img-overlay {
-	position: absolute;
-	bottom: 0;
-	left: 0;
+.events-img {
+	border-radius: 5px 5px 0 0;
+}
+
+.events-title h3 {
+	padding: 5px;
+	font-size: 25px;
+	font-weight: 500;
 	text-align: center;
+	text-decoration: none;
 }
 
-.img-overlay:before {
-	content: ' ';
-	display: block;
-	height: 20%;
-}
-
-.event-text {
-	bottom: 0;
-	top: 40;
-	left: 0;
-	width: 100%;
-	color: #fff;
-	padding: 20px;
+.author {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
 
 .btn {
