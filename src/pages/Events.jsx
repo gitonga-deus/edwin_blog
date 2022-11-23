@@ -1,41 +1,64 @@
+import { useState, useEffect } from "react";
+
 import { Row, Col, Button } from "react-bootstrap";
 
 import { PageTitle } from "../components";
 
-import event from "../../assets/img1.jpg"
+import sanityClient from "../client.js";
+
+import { Link } from "react-router-dom";
 
 const Events = () => {
 
-	const handleClick = () => {
-		alert("You clicked the button!");
-	}
+	const [post, setPost] = useState(null);
+
+	useEffect(() => {
+		sanityClient
+			.fetch(`*[_type == "post"]{
+				title,
+				slug,
+				mainImage{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				}
+			}`)
+			.then((data) => setPost(data))
+			.catch(console.error);
+	}, []);
+
+	// const handleClick = () => {
+	// 	alert("You clicked the button!");
+	// }
 
 	return (
 		<Row>
 			<PageTitle title="Events" />
-			<Col sm={12} className="py-4 my-2">
-				<div className="img-wrapper">
-					<img src={event} alt="Recent Event" className="d-block w-100 img-event" height="400px" style={{ borderRadius: "10px", objectFit: "cover" }} />
-					<div className="img-overlay p-3">
-						<h3 className="event-text">Lorem ipsum dolor sit amet...
-							{" "}
-							<a href="#">view event</a>
-						</h3>
-					</div>
-				</div>
+			<Col sm={6} md={6} lg={6}>
+				{post && post.map((post, index) => (
+					<article>
+						<Link to={"/event/" + post.slug.current} key={post.slug.current}>
+							<span key={index}>
+								<img
+									style={{
+										width: "800px",
+										height: "500px",
+										objectFit: "cover",
+										backgroundPosition: "center",
+									}}
+									src={post.mainImage.asset.url}
+									alt={post.mainImage.alt}
+								/>
+								<span>
+									<h3>{post.title}</h3>
+								</span>
+							</span>
+						</Link>
+					</article>
+				))}
 			</Col>
-			{[1, 2, 3, 4].map((item, i) => {
-				return (
-					<Col sm={6} className="py-4 my-2" key={i}>
-						<div className="img-wrapper">
-							<img src={event} alt="Recent Event" className="d-block w-100 img-event" height="300px" style={{ borderRadius: "10px", objectFit: "cover" }} />
-							<div className="img-overlay p-3">
-								<Button onClick={() => handleClick()} className="btn">View Event</Button>
-							</div>
-						</div>
-					</Col>
-				);
-			})}
 		</Row>
 	)
 }

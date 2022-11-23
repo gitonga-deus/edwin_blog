@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "gshg_backend"
+    "name": "backend"
   },
   "api": {
-    "projectId": "ihn8cjrq",
+    "projectId": "q04r70xj",
     "dataset": "production"
   },
   "plugins": [
