@@ -6,38 +6,34 @@ import { CgProfile } from "react-icons/cg"
 
 import hero from "../../assets/img1.jpg";
 
-import data from "../data.json";
+// const Person = ({ person }) => {
+// 	return (
+// 		<Row>
+// 			<Col className="my-4" sm={12} md={12} lg={12}>
+// 				<Col sm={4}>
+// 					<CgProfile fontSize={60} style={{ height: "150px" }} />
+// 					<h5>Name: {person.name}</h5>
+// 					<p>Rank: {person.rank}</p>
+// 					<p>Email Address: {person.emailAddress}</p>
+// 					<p>Mobile Number: {person.phone_no}</p>
 
-const Person = ({ person }) => {
-	return (
-		<Row>
-			<Col className="my-4" sm={12} md={12} lg={12}>
-				<Col sm={4}>
-					<CgProfile fontSize={60} style={{ height: "150px" }} />
-					<h5>Name: {person.name}</h5>
-					<p>Rank: {person.rank}</p>
-					<p>Email Address: {person.emailAddress}</p>
-					<p>Mobile Number: {person.phone_no}</p>
-
-				</Col>
-				<Col sm={8}>
-					<p>{person.description}</p>
-				</Col>
-			</Col>
-		</Row>
-	);
-}
+// 				</Col>
+// 				<Col sm={8}>
+// 					<p>{person.description}</p>
+// 				</Col>
+// 			</Col>
+// 		</Row>
+// 	);
+// }
 
 const Management = () => {
-	const { management } = data;
-
-	const renderPersons = () => {
-		let result = [];
-		management.map((person, i) => {
-			result.push(<Person person={person} key={i} />);
-		});
-		return result;
-	};
+	// const renderPersons = () => {
+	// 	let result = [];
+	// 	management.map((person, i) => {
+	// 		result.push(<Person person={person} key={i} />);
+	// 	});
+	// 	return result;
+	// };
 
 	return (
 		<Row>
@@ -70,8 +66,8 @@ const Management = () => {
 					The group has an accountant who serves the members on daily basis in the physical office within the Parish compound. Services are fully automated with real time alert
 				</p>
 			</div>
-			<PageTitle title="The Management Committee" />
-			{renderPersons()}
+			{/* <PageTitle title="The Management Committee" /> */}
+			{/* {renderPersons()} */}
 			{/* 
 			<Person name="John Doe" rank="Patron" />
 			<Person name="Jane Doe" rank="Chairperson" /> 
