@@ -34,8 +34,6 @@ const Contact = () => {
 		}).catch((err) => {
 			alert("Email failed to send.", err);
 		});
-
-		// setToSend({ " sender_name": "", "sender_mobile": "", "sender_email": "", "message": "" });
 	}
 
 	const handleChange = (e) => {
@@ -50,7 +48,7 @@ const Contact = () => {
 				border: "1px solid #661111",
 				borderRadius: "10px"
 			}}>
-				<Col sm={4} style={{
+				<Col sm={5} md={5} lg={4} style={{
 					color: "#fff",
 					backgroundColor: "#661111",
 					borderRadius: "10px 0 0 10px"
@@ -79,7 +77,7 @@ const Contact = () => {
 						<p>Mon - Fri from 9am to 5pm <br /> +254-710-273-227</p>
 					</div>
 				</Col>
-				<Col sm={8}>
+				<Col sm={7} md={7} lg={8}>
 					<Form onSubmit={sendEmail} className="py-4">
 						<Row>
 							<Col sm={6} md={6}>

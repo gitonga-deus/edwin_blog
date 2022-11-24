@@ -12,18 +12,17 @@ import mode from "../../assets/channel.svg"
 
 const Products = () => {
 
-	const { products, loanApplication, paymentChannels } = data;
+	const { products, paymentChannels } = data;
 
 	const renderProducts = () => {
 		let result = [];
 		products.map((product, i) => {
 			result.push(
-				<Col className="my-4" sm={4}>
-					<div className="p-1 text-center">
+				<Col sm={6} md={6} lg={4} key={i}>
+					<div className="p-1 my-2 text-center">
 						<Card className="shadow" style={{
 							height: "250px"
 						}}>
-
 							<CardHeader className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
 								<img src={img} alt={`${product.loanType} Loan`} height="50px" className="m-1" />
 								<h4>{product.loanType}</h4>
@@ -37,25 +36,11 @@ const Products = () => {
 		return result;
 	};
 
-	const renderLoanApplication = () => {
-		let result = [];
-		loanApplication.map((application, index) => {
-			result.push(
-				<Col sm={12}>
-					<ul key={index}>
-						<li style={{ marginLeft: "5px" }} >{application}</li>
-					</ul>
-				</Col>
-			)
-		})
-		return result;
-	};
-
 	const renderPaymentChannel = () => {
 		let result = [];
 		paymentChannels.map((channel, idx) => {
 			result.push(
-				<Col className="my-4" sm={3} key={idx}>
+				<Col className="my-4 text-center" sm={6} md={6} lg={3} key={idx}>
 					<Card className="shadow" style={{
 						height: "auto"
 					}}>
@@ -75,20 +60,16 @@ const Products = () => {
 	}
 
 	return (
-		<>
-			<Row>
-				<PageTitle title="Loan Products" />
-				<p className="text-center">
-					<strong>NOTE:</strong>
-					Members are entitled to different loans but will limited to only one type of loan product at any given time.
-				</p>
-				{renderProducts()}
-				{/* <PageTitle title="How to Apply" />
-				{renderLoanApplication()} */}
-				<PageTitle title="Payment Channels" />
-				{renderPaymentChannel()}
-			</Row>
-		</>
+		<Row>
+			<PageTitle title="Loan Products" />
+			<p className="text-center">
+				<strong>NOTE:</strong>
+				Members are entitled to different loans but will limited to only one type of loan product at any given time.
+			</p>
+			{renderProducts()}
+			<PageTitle title="Payment Channels" />
+			{renderPaymentChannel()}
+		</Row>
 	)
 }
 

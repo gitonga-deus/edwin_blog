@@ -11,7 +11,7 @@ import { Container } from "react-bootstrap"
 
 const App = () => {
 	return (
-		<>
+		<main>
 			<div className="py-3">
 				<Navigation />
 				<Container>
@@ -26,7 +26,7 @@ const App = () => {
 				</Container>
 			</div>
 			<Footer />
-		</>
+		</main>
 	)
 }
 

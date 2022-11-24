@@ -1,25 +1,14 @@
-import { Row, Col, Card } from "react-bootstrap"
+// React Hooks
+import { useEffect } from "react";
 
-import { PageTitle, Slider } from "../components";
-
-import data from "../data.json"
-
+// React Bootstrap
+import { Row, Col, Card } from "react-bootstrap";
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
-// const Item = ({ title, content }) => {
-// 	return (
-// <Col className="my-4" sm={4} md={4}>
-// 	<Card style={{ height: "250px" }}>
-// 		<CardHeader style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
-// 			<h5 className="py-1">{title}</h5>
-// 		</CardHeader>
-// 		<span className="p-3">
-// 			{content}
-// 		</span>
-// 	</Card>
-// </Col>
-// 	)
-// }
+// Components
+import { PageTitle, Slider } from "../components";
+
+import data from "../data.json";
 
 const Home = () => {
 	const { home_icons } = data;
@@ -28,7 +17,7 @@ const Home = () => {
 		let result = [];
 		home_icons.map((item, index) => {
 			result.push(
-				<Col className="my-4 text-center" sm={6} md={4} key={index}>
+				<Col className="my-4 text-center" sm={12} md={12} lg={4} key={index}>
 					<Card style={{ height: "auto" }} className="shadow">
 						<CardHeader style={{ backgroundColor: "#661111", color: "#fff", padding: "5px" }}>
 							<img src={item.icon} height="55px" width="55px" alt={item.name} />
