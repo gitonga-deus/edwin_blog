@@ -7,24 +7,8 @@ import { CiBadgeDollar } from "react-icons/ci"
 
 import data from "../data.json"
 
-const Item = ({ product }) => {
-	return (
-		<Col className="my-4" sm={4}>
-			<div className="p-1 text-center">
-				<Card style={{
-					height: "250px"
-				}}>
-
-					<CardHeader className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
-						<CiBadgeDollar fontSize={50} />
-						<h4>{product.loanType}</h4>
-					</CardHeader>
-					<p className="p-3">{product.description}</p>
-				</Card>
-			</div>
-		</Col >
-	)
-}
+import img from "../../assets/loan.svg"
+import mode from "../../assets/channel.svg"
 
 const Products = () => {
 
@@ -33,7 +17,22 @@ const Products = () => {
 	const renderProducts = () => {
 		let result = [];
 		products.map((product, i) => {
-			result.push(<Item key={i} product={product} />)
+			result.push(
+				<Col className="my-4" sm={4}>
+					<div className="p-1 text-center">
+						<Card className="shadow" style={{
+							height: "250px"
+						}}>
+
+							<CardHeader className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
+								<img src={img} alt={`${product.loanType} Loan`} height="50px" className="m-1" />
+								<h4>{product.loanType}</h4>
+							</CardHeader>
+							<p className="p-3">{product.description}</p>
+						</Card>
+					</div>
+				</Col >
+			)
 		})
 		return result;
 	};
@@ -57,11 +56,11 @@ const Products = () => {
 		paymentChannels.map((channel, idx) => {
 			result.push(
 				<Col className="my-4" sm={3} key={idx}>
-					<Card style={{
+					<Card className="shadow" style={{
 						height: "auto"
 					}}>
 						<CardHeader className="p-3" style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
-							<CiBadgeDollar fontSize={50} />
+							<img src={mode} alt={`${channel.name}`} height="50px" className="m-1" />
 							<h4>{channel.name}</h4>
 						</CardHeader>
 						<div className="p-3">
@@ -84,8 +83,8 @@ const Products = () => {
 					Members are entitled to different loans but will limited to only one type of loan product at any given time.
 				</p>
 				{renderProducts()}
-				<PageTitle title="How to Apply" />
-				{renderLoanApplication()}
+				{/* <PageTitle title="How to Apply" />
+				{renderLoanApplication()} */}
 				<PageTitle title="Payment Channels" />
 				{renderPaymentChannel()}
 			</Row>

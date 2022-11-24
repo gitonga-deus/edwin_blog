@@ -2,27 +2,48 @@ import { Row, Col, Card } from "react-bootstrap"
 
 import { PageTitle, Slider } from "../components";
 
+import data from "../data.json"
+
 import CardHeader from "react-bootstrap/esm/CardHeader";
 
-import { SlRocket } from "react-icons/sl"
-
-const Item = ({ title, content }) => {
-	return (
-		<Col className="my-4" sm={4} md={4}>
-			<Card style={{height: "250px"}}>
-				<CardHeader style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
-					<SlRocket fontSize={40} />
-					<h5 className="py-1">{title}</h5>
-				</CardHeader>
-				<span className="p-3">
-					{content}
-				</span>
-			</Card>
-		</Col>
-	)
-}
+// const Item = ({ title, content }) => {
+// 	return (
+// <Col className="my-4" sm={4} md={4}>
+// 	<Card style={{ height: "250px" }}>
+// 		<CardHeader style={{ backgroundColor: "#661111", color: "#fff", textAlign: "center" }}>
+// 			<h5 className="py-1">{title}</h5>
+// 		</CardHeader>
+// 		<span className="p-3">
+// 			{content}
+// 		</span>
+// 	</Card>
+// </Col>
+// 	)
+// }
 
 const Home = () => {
+	const { home_icons } = data;
+
+	const renderHomeIcons = () => {
+		let result = [];
+		home_icons.map((item, index) => {
+			result.push(
+				<Col className="my-4 text-center" sm={6} md={4} key={index}>
+					<Card style={{ height: "auto" }} className="shadow">
+						<CardHeader style={{ backgroundColor: "#661111", color: "#fff", padding: "5px" }}>
+							<img src={item.icon} height="55px" width="55px" alt={item.name} />
+							<h3 className="py-1">{item.name}</h3>
+						</CardHeader>
+						<span className="p-3">
+							{item.description}
+						</span>
+					</Card>
+				</Col>
+			)
+		});
+		return result;
+	}
+
 	return (
 		<Row>
 			<PageTitle title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
@@ -32,7 +53,7 @@ const Home = () => {
 			</div>
 
 			<PageTitle title="Who are We" />
-			<div className="col-sm-12" style={{ paddingTop: "20px" }}>
+			<div className="col-sm-12" style={{ padding: "20px" }}>
 				<p>
 					<strong>St. John Evangelist Githiga Catholic Church Self-Help Group</strong> was established in the year <strong>1993 in Githiga Parish of the Archdiocese of Nairobi</strong>. It is an inclusive group that does not discriminate against any person due to age, religion, social status, or otherwise. It is among many others that operate within Parishes in the Archdiocese of Nairobi.
 				</p>
@@ -46,9 +67,7 @@ const Home = () => {
 					Membership is drawn from all regions, including the diaspora as make the best use of technology
 				</p>
 			</div>
-			<Item title="Mission" content="To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles." />
-			<Item title="Vision" content="To be the preferred community-based financial service provider." />
-			<Item title="Values" content="Accountability, Honesty, Integrity, Transparency, and Teamwork" />
+			{renderHomeIcons()}
 		</Row >
 	)
 }

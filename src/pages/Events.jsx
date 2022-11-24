@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Row, Col, Card, Button } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 
 import { PageTitle } from "../components";
 
@@ -34,7 +34,7 @@ const Events = () => {
 			<PageTitle title="Announcements and Events" />
 			{post && post.map((post, index) => (
 				<Col sm={12} md={12} lg={6} className="p-4" key={index}>
-					<Card style={{ borderRadius: "5px" }}>
+					<Card style={{ borderRadius: "5px" }} className="shadow">
 						<Link to={"/event/" + post.slug.current} key={post.slug.current}>
 							<span >
 								<img
