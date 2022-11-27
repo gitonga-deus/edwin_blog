@@ -8,26 +8,6 @@ import mission from "../../assets/home_icons/mission.svg";
 import vision from "../../assets/home_icons/vision.svg";
 import value from "../../assets/home_icons/value.svg";
 
-import data from "../data.json";
-
-// "home_icons": [
-// 	{
-// 		"name": "Vision",
-// 		"icon": "../../assets/home_icons/vision.svg",
-// 		"description": "To be the preferred community-based financial service provider."
-// 	},
-// 	{
-// 		"name": "Mission",
-// 		"icon": "../../assets/home_icons/mission.svg",
-// 		"description": "To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles."
-// 	},
-// 	{
-// 		"name": "Core Values",
-// 		"icon": "../../assets/home_icons/value.svg",
-// 		"description": "Accountability, Honesty, Integrity, Transparency, and Teamwork."
-// 	}
-// ],
-
 const Home = () => {
 	return (
 		<Row>

@@ -90,9 +90,9 @@ const Products = () => {
 
 	const renderPaymentChannel = () => {
 		let result = [];
-		payment_channels.map((channel, idx) => {
+		payment_channels.map((channel, i) => {
 			result.push(
-				<Col className="my-4 text-left" sm={6} md={6} lg={3} key={idx}>
+				<Col className="my-4 text-left" sm={6} md={6} lg={3} key={i}>
 					<Card className="shadow" style={{
 						height: "220px"
 					}}>

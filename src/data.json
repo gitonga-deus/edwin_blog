@@ -45,13 +45,6 @@
 			"description": "This membership is granted to individuals who are below years and are willing to save and borrow from the society."
 		}
 	],
-	"loan_application": [
-		"Fill in loan application form",
-		"Return loan form for appraisal and approval",
-		"Pay loan insurance fund of 1% of approved loan",
-		"Collect loan cheque",
-		"Start paying loan promptly after a Grace period of one month."
-	],
 	"payment_channels": [
 		{
 			"name": "GDC",
