@@ -1,38 +1,34 @@
-// React Hooks
-import { useEffect } from "react";
-
 // React Bootstrap
 import { Row, Col, Card } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
 
 // Components
 import { PageTitle, Slider } from "../components";
 
+import mission from "../../assets/home_icons/mission.svg";
+import vision from "../../assets/home_icons/vision.svg";
+import value from "../../assets/home_icons/value.svg";
+
 import data from "../data.json";
 
+// "home_icons": [
+// 	{
+// 		"name": "Vision",
+// 		"icon": "../../assets/home_icons/vision.svg",
+// 		"description": "To be the preferred community-based financial service provider."
+// 	},
+// 	{
+// 		"name": "Mission",
+// 		"icon": "../../assets/home_icons/mission.svg",
+// 		"description": "To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles."
+// 	},
+// 	{
+// 		"name": "Core Values",
+// 		"icon": "../../assets/home_icons/value.svg",
+// 		"description": "Accountability, Honesty, Integrity, Transparency, and Teamwork."
+// 	}
+// ],
+
 const Home = () => {
-	const { home_icons } = data;
-
-	const renderHomeIcons = () => {
-		let result = [];
-		home_icons.map((item, index) => {
-			result.push(
-				<Col className="my-4 text-center" sm={12} md={12} lg={4} key={index}>
-					<Card style={{ height: "auto" }} className="shadow">
-						<CardHeader style={{ backgroundColor: "#661111", color: "#fff", padding: "5px" }}>
-							<img src={item.icon} height="55px" width="55px" alt={item.name} />
-							<h3 className="py-1">{item.name}</h3>
-						</CardHeader>
-						<span className="p-3">
-							{item.description}
-						</span>
-					</Card>
-				</Col>
-			)
-		});
-		return result;
-	}
-
 	return (
 		<Row>
 			<PageTitle title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
@@ -56,7 +52,39 @@ const Home = () => {
 					Membership is drawn from all regions, including the diaspora as make the best use of technology
 				</p>
 			</div>
-			{renderHomeIcons()}
+			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
+				<Card style={{ height: "260px" }} className="shadow">
+					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
+						<img src={vision} height="60px" width="60px" alt="Vision" />
+						<h3 className="py-1">Vision</h3>
+					</Card.Header>
+					<span className="p-3">
+						To be the preferred community-based financial service provider.
+					</span>
+				</Card>
+			</Col>
+			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
+				<Card style={{ height: "260px" }} className="shadow">
+					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
+						<img src={mission} height="60px" width="60px" alt="Mission" />
+						<h3 className="py-1">Mission</h3>
+					</Card.Header>
+					<span className="p-3">
+						To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles.
+					</span>
+				</Card>
+			</Col>
+			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
+				<Card style={{ height: "260px" }} className="shadow">
+					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
+						<img src={value} height="60px" width="60px" alt="Core Values" />
+						<h3 className="py-1">Core Values</h3>
+					</Card.Header>
+					<span className="p-3">
+						Accountability, Honesty, Integrity, Transparency, and Teamwork.
+					</span>
+				</Card>
+			</Col>
 		</Row >
 	)
 }

@@ -120,8 +120,9 @@ const Products = () => {
 
 			<PageTitle title="Loan Products" />
 			<div className="text-center">
-				<strong>NOTE:</strong>
-				Members are entitled to different loans but will limited to only one type of loan product at any given time.
+				<p><strong>NOTE:</strong>{" "}
+					Members are entitled to different loans but will limited to only one type of loan product at any given time.
+				</p>
 			</div>
 			{renderLoan()}
 			<PageTitle title="Membership" />

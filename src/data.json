@@ -5,23 +5,6 @@
 		"A copy of Next of Kin National ID",
 		"Birth Certificate / Baptism Card for Minor Account."
 	],
-	"home_icons": [
-		{
-			"name": "Vision",
-			"icon": "../../assets/home_icons/vision.svg",
-			"description": "To be the preferred community-based financial service provider."
-		},
-		{
-			"name": "Mission",
-			"icon": "../../assets/home_icons/mission.svg",
-			"description": "To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles."
-		},
-		{
-			"name": "Core Values",
-			"icon": "../../assets/home_icons/value.svg",
-			"description": "Accountability, Honesty, Integrity, Transparency, and Teamwork."
-		}
-	],
 	"loan_products": [
 		{
 			"loanType": "Development Loan",
