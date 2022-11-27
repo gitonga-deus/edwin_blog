@@ -1,4 +1,10 @@
 {
+	"membership_requirements": [
+		"National I.D Card Copy",
+		"A copy of KRA PIN",
+		"A copy of Next of Kin National ID",
+		"Birth Certificate / Baptism Card for Minor Account."
+	],
 	"home_icons": [
 		{
 			"name": "Vision",
@@ -16,10 +22,10 @@
 			"description": "Accountability, Honesty, Integrity, Transparency, and Teamwork."
 		}
 	],
-	"products": [
+	"loan_products": [
 		{
 			"loanType": "Development Loan",
-			"description": "An all-purpose loan granted to all members individually or corporates to finance development projects"
+			"description": "This an all-purpose loan granted to all members individually or corporates to finance development projects"
 		},
 		{
 			"loanType": "Emergency Loan",
@@ -35,34 +41,48 @@
 		},
 		{
 			"loanType": "Agribusiness Loan",
-			"description": "This loan is granted for agricultural purposes aimed at promoting agriculture for food security, improved livelihoods, e.t.c"
+			"description": "This loan is granted for agricultural purposes aimed at promoting agriculture for food security, improved livelihoods."
 		},
 		{
 			"loanType": "Church Loan",
 			"description": "This loan is granted to Catholic Churches only through the Parish pastoral."
 		}
 	],
-	"loanApplication": [
+	"membership_products": [
+		{
+			"type": "Individuals Accounts",
+			"description": "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the society."
+		},
+		{
+			"type": "Corporate Accounts",
+			"description": "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the society."
+		},
+		{
+			"type": "Minor Accounts",
+			"description": "This membership is granted to individuals who are below years and are willing to save and borrow from the society."
+		}
+	],
+	"loan_application": [
 		"Fill in loan application form",
 		"Return loan form for appraisal and approval",
 		"Pay loan insurance fund of 1% of approved loan",
 		"Collect loan cheque",
 		"Start paying loan promptly after a Grace period of one month."
 	],
-	"paymentChannels": [
+	"payment_channels": [
 		{
 			"name": "GDC",
-			"accountName": "Account Name",
+			"accountName": "GDC A/C Name",
 			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
 			"name": "Caritas MFB",
-			"accountName": "Account Name",
+			"accountName": "Caritas A/C Name",
 			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
 			"name": "KCB",
-			"accountName": "Account Name",
+			"accountName": "KCB A/C Name",
 			"accountNumber": "0123 9234 8345 7456"
 		},
 		{
@@ -70,5 +90,9 @@
 			"accountName": "Member's No.",
 			"accountNumber": "Paybill No: 123 456"
 		}
-	]
+	],
+	"emailAddress": "shg@githiga.caritasnairobishp.org",
+	"phoneNumber": "+254 710 273 227",
+	"address": "P.O. Box 1107 - 00900",
+	"location": "Kiambu"
 }

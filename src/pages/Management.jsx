@@ -1,4 +1,4 @@
-import { Row, Col, Card } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 import { PageTitle } from "../components";
 

@@ -13,6 +13,9 @@ import { send } from "emailjs-com";
 import { BsChatDots, BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 
+// Data for Contact Page
+import contacts from "../data.json"
+
 const Contact = () => {
 
 	const [toSend, setToSend] = useState({
@@ -40,6 +43,8 @@ const Contact = () => {
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
 	}
 
+	const { location, address, emailAddress, phoneNumber } = contacts
+
 	return (
 		<div className="py-4">
 			<PageTitle title="Get in Touch" />
@@ -60,21 +65,21 @@ const Contact = () => {
 						</h3>
 						<p>
 							Our friendly team is here to help: <br />
-							shg@githiga.caritasnairobishp.org
+							{emailAddress}
 						</p>
 					</div>
 					<div className="p-3">
 						<h3 className="d-flex align-items-center">
 							<SlLocationPin /> <span style={{ marginLeft: "10px" }} >Office</span>
 						</h3>
-						<p>We are located at: <br /> P.O Box 1107 - 00900, <br /> Kiambu </p>
+						<p>We are located at: <br /> {address}, <br /> {location}. </p>
 					</div>
 					<div className="p-3">
 						<h3 className="d-flex align-items-center">
 							<BsTelephone />
 							<span style={{ marginLeft: "10px" }} >Phone</span>
 						</h3>
-						<p>Mon - Fri from 9am to 5pm <br /> +254-710-273-227</p>
+						<p>Mon - Fri from 9am to 5pm <br /> {phoneNumber}</p>
 					</div>
 				</Col>
 				<Col sm={7} md={7} lg={8}>
