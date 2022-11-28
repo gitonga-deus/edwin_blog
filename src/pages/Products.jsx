@@ -10,9 +10,9 @@ import { PageTitle } from "../components";
 import data from "../data.json"
 
 // SVG Icons
-import img from "../../assets/loan.svg"
-import mode from "../../assets/channel.svg"
-import member from "../../assets/membership.svg";
+import img from "../../assets/product/loan.svg"
+import mode from "../../assets/product/channel.svg"
+import member from "../../assets/product/membership.svg";
 
 const Membership = (props) => {
 	return (
