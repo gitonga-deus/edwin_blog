@@ -1,4 +1,4 @@
 export { default as Navigation } from "./Navigation";
 export { default as Footer } from "./Footer";
 export { default as Slider } from "./Slider";
-export { default as PageTitle } from "./PageTitle"
+export { default as Heading } from "./Heading"

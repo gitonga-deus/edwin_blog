@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="text-center py-4 text-white mt-4" style={{
+		<footer className="text-center py-4 text-white mt-4 footer" style={{
 			backgroundColor: "#661111",
 			fontSize: "15px",
 			height: "80px",
@@ -8,7 +8,6 @@ const Footer = () => {
 		}}>
 			<p style={{
 				verticalAlign: "middle",
-				margin: "0"
 			}}>
 				&copy; {new Date().getFullYear()} -
 				Githiga Self Help Group

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Col, Row, Form, Button } from "react-bootstrap";
 
 // Components
-import { PageTitle } from "../components";
+import { Heading } from "../components";
 
 // EmailJS
 import { send } from "emailjs-com";
@@ -47,7 +47,7 @@ const Contact = () => {
 
 	return (
 		<>
-			<PageTitle title="Get in Touch" />
+			<Heading title="Get in Touch" />
 			<div className="py-3">
 				<Row style={{
 					margin: "5px",

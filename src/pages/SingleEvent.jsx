@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { PageTitle } from "../components"
+import { Heading } from "../components"
 
 import { Row, Col } from "react-bootstrap"
 import { useParams } from "react-router-dom";

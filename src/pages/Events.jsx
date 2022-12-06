@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import { Row, Col, Card } from "react-bootstrap";
 
-import { PageTitle } from "../components";
+import { Heading } from "../components";
 
 import sanityClient from "../client.js";
 
@@ -31,7 +31,7 @@ const Events = () => {
 
 	return (
 		<Row>
-			<PageTitle title="Announcements and Events" />
+			<Heading title="Announcements and Events" />
 			{post && post.map((post, index) => (
 				<Col sm={12} md={12} lg={6} className="p-4" key={index}>
 					<Card style={{ borderRadius: "5px" }} className="shadow">

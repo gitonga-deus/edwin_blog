@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Col, Row, Card, Button, Modal } from "react-bootstrap";
 
 // Components
-import { PageTitle } from "../components";
+import { Heading } from "../components";
 
 // Products Data
 import data from "../data.json"
@@ -118,14 +118,14 @@ const Products = () => {
 				onHide={() => setModalShow(false)}
 			/>
 
-			<PageTitle title="Loan Products" />
+			<Heading title="Loan Products" />
 			<div className="text-center">
 				<p><strong>NOTE:</strong>{" "}
 					Members are entitled to different loans but will limited to only one type of loan product at any given time.
 				</p>
 			</div>
 			{renderLoan()}
-			<PageTitle title="Membership" />
+			<Heading title="Membership" />
 			<div className="text-center">
 				<p><strong>NOTE:</strong>{" "}
 					Membership is a requirement for all persons to be able to access loan products and the benefits associated with becoming a member of our society.
@@ -133,7 +133,7 @@ const Products = () => {
 				<Button onClick={() => setModalShow(true)}>Become a Member</Button>
 			</div>
 			{renderMembership()}
-			<PageTitle title="Payment Channels" />
+			<Heading title="Payment Channels" />
 			{renderPaymentChannel()}
 		</Row>
 	)

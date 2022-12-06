@@ -1,15 +1,15 @@
 import { Row, Col, Card } from "react-bootstrap";
 
-import { PageTitle } from "../components";
+import { Heading } from "../components";
 
 import hero from "../../assets/img1.jpg";
-import placeholder from "../../assets/placeholder.jpg"
+// import placeholder from "../../assets/placeholder.jpg"
 
 const Management = () => {
 
 	return (
 		<Row>
-			<PageTitle title="Meet the Team" />
+			<Heading title="Meet the Team" />
 			<div className="py-4">
 				<img
 					className="d-block w-100"
@@ -19,7 +19,7 @@ const Management = () => {
 					alt="group photo"
 				/>
 			</div>
-			<PageTitle title="Leadership and Governance" />
+			<Heading title="Leadership and Governance" />
 			<div className="py-4">
 				<p>
 					Leadership is supervised and regulated by <strong>Caritas Nairobi Social Promotion,</strong> an economic arm of Archdiocese of Nairobi. Management Committee comprises of seven members elected from the general membership during Annual General Meeting.

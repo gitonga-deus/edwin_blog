@@ -2,7 +2,7 @@
 import { Row, Col, Card } from "react-bootstrap";
 
 // Components
-import { PageTitle, Slider } from "../components";
+import { Heading, Slider } from "../components";
 
 import mission from "../../assets/home/mission.svg";
 import vision from "../../assets/home/vision.svg";
@@ -11,13 +11,13 @@ import value from "../../assets/home/value.svg";
 const Home = () => {
 	return (
 		<Row>
-			<PageTitle title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
+			<Heading title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
 
 			<div className="py-4">
 				<Slider />
 			</div>
 
-			<PageTitle title="Who are We" />
+			<Heading title="Who are We" />
 			<div className="col-sm-12 text-justify" style={{ padding: "20px" }}>
 				<p>
 					<strong>St. John Evangelist Githiga Catholic Church Self-Help Group</strong> was established in the year <strong>1993 in Githiga Parish of the Archdiocese of Nairobi</strong>. It is an inclusive group that does not discriminate against any person due to age, religion, social status, or otherwise. It is among many others that operate within Parishes in the Archdiocese of Nairobi.
