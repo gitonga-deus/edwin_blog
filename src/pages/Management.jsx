@@ -1,11 +1,17 @@
+// React Bootstrap
 import { Row, Col, Card } from "react-bootstrap";
 
+// Components
 import { Heading } from "../components";
 
+// Utilities Functions
+import useDocumentTitle from "../utilities/useDocumentTitle";
+
 import hero from "../../assets/img1.jpg";
-// import placeholder from "../../assets/placeholder.jpg"
 
 const Management = () => {
+
+	useDocumentTitle("Management - Githiga SHG")
 
 	return (
 		<Row>

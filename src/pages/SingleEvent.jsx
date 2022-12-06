@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 
+// Components
 import { Heading } from "../components"
 
+// Utilities Functions
+import useDocumentTitle from "../utilities/useDocumentTitle";
+
+// React Bootstrap
 import { Row, Col } from "react-bootstrap"
+
+// React Router
 import { useParams } from "react-router-dom";
 
+// Sanity CMS
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react"
-
-
 
 const SinglePost = () => {
 
@@ -38,11 +44,13 @@ const SinglePost = () => {
 
 	}, [slug]);
 
+	useDocumentTitle(`${singlePost?.title} - Githiga SHG`)
+
 	if (!singlePost) return <div>Loading...</div>;
 
 	return (
 		<Row>
-			<PageTitle title={singlePost.title} />
+			<Heading title={singlePost.title} />
 			<Col sm={12} md={12} lg={12} className="py-4">
 				<header>
 					<img

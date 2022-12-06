@@ -6,6 +6,9 @@ import { Col, Row, Form, Button } from "react-bootstrap";
 // Components
 import { Heading } from "../components";
 
+// Utilities Functions
+import useDocumentTitle from "../utilities/useDocumentTitle";
+
 // EmailJS
 import { send } from "emailjs-com";
 
@@ -17,6 +20,8 @@ import { SlLocationPin } from "react-icons/sl";
 import contacts from "../data.json"
 
 const Contact = () => {
+
+	useDocumentTitle("Contact Us - Githiga SHG")
 
 	const [toSend, setToSend] = useState({
 		sender_name: "",

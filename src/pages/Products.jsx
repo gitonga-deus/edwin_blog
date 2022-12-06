@@ -6,6 +6,9 @@ import { Col, Row, Card, Button, Modal } from "react-bootstrap";
 // Components
 import { Heading } from "../components";
 
+// Utilities Functions
+import useDocumentTitle from "../utilities/useDocumentTitle";
+
 // Products Data
 import data from "../data.json"
 
@@ -15,6 +18,9 @@ import mode from "../../assets/product/channel.svg"
 import member from "../../assets/product/membership.svg";
 
 const Membership = (props) => {
+
+	useDocumentTitle("Products - Githiga SHG")
+
 	return (
 		<Modal
 			{...props}
@@ -118,13 +124,6 @@ const Products = () => {
 				onHide={() => setModalShow(false)}
 			/>
 
-			<Heading title="Loan Products" />
-			<div className="text-center">
-				<p><strong>NOTE:</strong>{" "}
-					Members are entitled to different loans but will limited to only one type of loan product at any given time.
-				</p>
-			</div>
-			{renderLoan()}
 			<Heading title="Membership" />
 			<div className="text-center">
 				<p><strong>NOTE:</strong>{" "}
@@ -133,6 +132,13 @@ const Products = () => {
 				<Button onClick={() => setModalShow(true)}>Become a Member</Button>
 			</div>
 			{renderMembership()}
+			<Heading title="Loan Products" />
+			<div className="text-center">
+				<p><strong>NOTE:</strong>{" "}
+					Members are entitled to different loans but will limited to only one type of loan product at any given time.
+				</p>
+			</div>
+			{renderLoan()}
 			<Heading title="Payment Channels" />
 			{renderPaymentChannel()}
 		</Row>

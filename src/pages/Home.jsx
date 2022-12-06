@@ -4,11 +4,16 @@ import { Row, Col, Card } from "react-bootstrap";
 // Components
 import { Heading, Slider } from "../components";
 
+// Utilities Functions
+import useDocumentTitle from "../utilities/useDocumentTitle";
+
+// SVG Icons
 import mission from "../../assets/home/mission.svg";
 import vision from "../../assets/home/vision.svg";
 import value from "../../assets/home/value.svg";
 
 const Home = () => {
+	useDocumentTitle("Home - Githiga SHG")
 	return (
 		<Row>
 			<Heading title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
