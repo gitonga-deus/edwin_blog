@@ -32,7 +32,8 @@ const Events = () => {
 						url
 					},
 					alt
-				}
+				},
+				publishedAt
 			}`)
 			.then((data) => setPost(data))
 			.catch(console.error);
@@ -53,8 +54,9 @@ const Events = () => {
 									alt={post.mainImage.alt}
 								/>
 							</span>
-							<span className="text-black events-title">
+							<span className="text-center text-black events-title">
 								<h3>{post.title}</h3>
+								<p>Published at: {post.publishedAt}</p>
 							</span>
 						</Link>
 					</Card>

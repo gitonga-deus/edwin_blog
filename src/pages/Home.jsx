@@ -38,7 +38,7 @@ const Home = () => {
 				</p>
 			</div>
 			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "260px" }} className="shadow">
+				<Card style={{ height: "300px" }} className="shadow">
 					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
 						<img src={vision} height="60px" width="60px" alt="Vision" />
 						<h3 className="py-1">Vision</h3>
@@ -49,7 +49,7 @@ const Home = () => {
 				</Card>
 			</Col>
 			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "260px" }} className="shadow">
+				<Card style={{ height: "300px" }} className="shadow">
 					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
 						<img src={mission} height="60px" width="60px" alt="Mission" />
 						<h3 className="py-1">Mission</h3>
@@ -60,7 +60,7 @@ const Home = () => {
 				</Card>
 			</Col>
 			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "260px" }} className="shadow">
+				<Card style={{ height: "300px" }} className="shadow">
 					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
 						<img src={value} height="60px" width="60px" alt="Core Values" />
 						<h3 className="py-1">Core Values</h3>
