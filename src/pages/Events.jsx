@@ -40,7 +40,7 @@ const Events = () => {
 
 	return (
 		<Row>
-			<Heading title="Announcements and Events" />
+			<Heading title="Events" />
 			{post && post.map((post, index) => (
 				<Col sm={12} md={12} lg={6} className="p-4" key={index}>
 					<Card style={{ borderRadius: "5px" }} className="shadow">
