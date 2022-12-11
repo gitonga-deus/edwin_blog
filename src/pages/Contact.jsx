@@ -42,6 +42,13 @@ const Contact = () => {
 		}).catch((err) => {
 			alert("Email failed to send.", err);
 		});
+
+		setToSend({
+			sender_name: "",
+			sender_mobile: "",
+			sender_email: "",
+			message: ""
+		});
 	}
 
 	const handleChange = (e) => {
