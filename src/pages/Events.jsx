@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 const Events = () => {
 
-	useDocumentTitle("Events - Githiga SHG")
+	useDocumentTitle("Events - Githiga SHG");
 
 	const [post, setPost] = useState(null);
 
@@ -39,6 +39,17 @@ const Events = () => {
 			.catch(console.error);
 	}, []);
 
+	const handleTimeStamp = (timestamp) => {
+		const date = new Date(timestamp);
+
+		return date.toLocaleDateString('en-GB', {
+			weekday: "long",
+			day: "numeric",
+			month: "long",
+			year: "numeric"
+		});
+	};
+
 	return (
 		<Row>
 			<Heading title="Events" />
@@ -56,7 +67,7 @@ const Events = () => {
 							</span>
 							<span className="text-center text-black events-title">
 								<h3>{post.title}</h3>
-								<p>Published at: {post.publishedAt}</p>
+								<p>Published at: {handleTimeStamp(post.publishedAt)}</p>
 							</span>
 						</Link>
 					</Card>
