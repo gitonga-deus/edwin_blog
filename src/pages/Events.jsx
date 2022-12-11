@@ -50,7 +50,7 @@ const Events = () => {
 							<span >
 								<img
 									className="d-block w-100 mb-3 events-img"
-									style={{ objectFit: "cover", height: "200px" }}
+									style={{ objectFit: "cover", height: "150px" }}
 									src={post.mainImage.asset.url}
 									alt={post.mainImage.alt}
 								/>
