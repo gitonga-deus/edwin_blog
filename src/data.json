@@ -3,7 +3,7 @@
 		"National I.D Card Copy",
 		"A copy of KRA PIN",
 		"A copy of Next of Kin National ID",
-		"Birth Certificate / Baptism Card for Minor Account."
+		"Birth Certificate / Baptism Card for Minor Accounts."
 	],
 	"loan_products": [
 		{
@@ -49,22 +49,22 @@
 		{
 			"name": "GDC",
 			"accountName": "GDC A/C Name",
-			"accountNumber": "0123 9234 8345 7456"
+			"accountNumber": "120008000700"
 		},
 		{
 			"name": "Caritas MFB",
 			"accountName": "Caritas A/C Name",
-			"accountNumber": "0123 9234 8345 7456"
+			"accountNumber": "1002025000057"
 		},
 		{
 			"name": "KCB",
 			"accountName": "KCB A/C Name",
-			"accountNumber": "0123 9234 8345 7456"
+			"accountNumber": "1101918799"
 		},
 		{
 			"name": "MPESA",
 			"accountName": "Member's No.",
-			"accountNumber": "Paybill No: 123 456"
+			"accountNumber": "Paybill No: --- ---"
 		}
 	],
 	"emailAddress": "shg@githiga.caritasnairobishp.org",

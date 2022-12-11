@@ -22,8 +22,8 @@ const Slider = () => {
 					alt="First slide"
 				/>
 				<Carousel.Caption>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					<h3>Website Launch</h3>
+					<p>View Event from the Events Page</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
@@ -36,8 +36,8 @@ const Slider = () => {
 				/>
 
 				<Carousel.Caption>
-					<h3>Second slide label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<h3>Annual General Meeting</h3>
+					<p>View Event from the Events Page</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>
