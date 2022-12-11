@@ -98,16 +98,15 @@ const Products = () => {
 		let result = [];
 		payment_channels.map((channel, i) => {
 			result.push(
-				<Col className="my-4 text-left" sm={6} md={6} lg={3} key={i}>
+				<Col className="my-4 text-center" sm={6} md={6} lg={3} key={i}>
 					<Card className="shadow" style={{
-						height: "220px"
+						height: "200px"
 					}}>
-						<Card.Header className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff", alignItems: "center" }}>
+						<Card.Header className="p-3" style={{ backgroundColor: "#661111", color: "#fff", alignItems: "center" }}>
 							<img src={mode} alt={`${channel.name} Loan`} height="50px" className="m-1" />
 							<h4>{channel.name}</h4>
 						</Card.Header>
 						<Card.Body>
-							Acc Name: {channel.accountName} <br />
 							Acc No: {channel.accountNumber}
 						</Card.Body>
 					</Card>

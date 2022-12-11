@@ -48,23 +48,20 @@
 	"payment_channels": [
 		{
 			"name": "GDC",
-			"accountName": "GDC A/C Name",
 			"accountNumber": "120008000700"
 		},
 		{
 			"name": "Caritas MFB",
-			"accountName": "Caritas A/C Name",
 			"accountNumber": "1002025000057"
 		},
 		{
 			"name": "KCB",
-			"accountName": "KCB A/C Name",
 			"accountNumber": "1101918799"
 		},
 		{
 			"name": "MPESA",
 			"accountName": "Member's No.",
-			"accountNumber": "Paybill No: --- ---"
+			"accountNumber": "Paybill No: 123 456 Account Name: Member's No"
 		}
 	],
 	"emailAddress": "shg@githiga.caritasnairobishp.org",
