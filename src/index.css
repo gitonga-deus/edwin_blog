@@ -34,6 +34,10 @@ a {
 	gap: 20px;
 }
 
+.name {
+	padding-top: 20px;
+}
+
 .btn {
 	background-color: #661111;
 	color: #fff;

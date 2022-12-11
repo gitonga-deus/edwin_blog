@@ -5,6 +5,7 @@ import { Heading } from "../components"
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
+import { handleTimeStamp } from "../utilities/handleTimestamp";
 
 // React Bootstrap
 import { Row, Col } from "react-bootstrap"
@@ -37,7 +38,8 @@ const SinglePost = () => {
 				mainImage{ asset->{ _id, url} },
 				body,
 				"name": author->name,
-				"authorImage": author->image
+				"authorImage": author->image,
+				publishedAt
 			}`)
 			.then((data) => setSinglePost(data[0]))
 			.catch(console.error);
@@ -57,7 +59,7 @@ const SinglePost = () => {
 						src={singlePost.mainImage.asset.url}
 						alt={singlePost.title}
 						className="d-block w-100"
-						style={{ borderRadius: "10px", objectFit: "cover", height: "400px" }}
+						style={{ borderRadius: "5px", objectFit: "cover", height: "400px" }}
 					/>
 				</header>
 				<div className="py-2 m-4 author">
@@ -71,8 +73,11 @@ const SinglePost = () => {
 							objectFit: "cover",
 						}}
 					/>
-					<h4>{singlePost.name}</h4>
-					<p>{singlePost.bio}</p>
+					<div className="name">
+						<h5>{singlePost.name}</h5>
+						<p className="text-muted">{handleTimeStamp(singlePost.publishedAt)}</p>
+					</div>
+					{/* <p>{singlePost.bio}</p> */}
 				</div>
 				<div className="py-2 m-4">
 					<BlockContent blocks={singlePost.body} projectId="q04r70xj" dataset="production" />
