@@ -67,7 +67,7 @@ const Events = () => {
 							</span>
 							<span className="text-center text-black events-title">
 								<h3>{post.title}</h3>
-								<p>Published at: {handleTimeStamp(post.publishedAt)}</p>
+								<p>This event happened at: {handleTimeStamp(post.publishedAt)}</p>
 							</span>
 						</Link>
 					</Card>
