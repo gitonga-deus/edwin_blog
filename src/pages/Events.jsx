@@ -43,7 +43,7 @@ const Events = () => {
 		<Row>
 			<Heading title="Events" />
 			{post && post.map((post, index) => (
-				<Col sm={12} md={12} lg={3} className="p-3" key={index}>
+				<Col sm={6} md={6} lg={3} className="p-3" key={index}>
 					<Card style={{ borderRadius: "5px" }} className="shadow">
 						<Link to={"/event/" + post.slug.current} key={post.slug.current}>
 							<span >
