@@ -1,46 +1,60 @@
-import { useState } from 'react';
-import { Carousel } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { Carousel, Row, Button } from 'react-bootstrap';
+import sanityClient from "../client.js";
+
+import { Link } from "react-router-dom";
 
 import img1 from "../../assets/img1.jpg"
 import img2 from "../../assets/img2.jpg"
 
 const Slider = () => {
+	const [post, setPost] = useState(null);
 	const [index, setIndex] = useState(0);
+
+	useEffect(() => {
+		sanityClient
+			.fetch(`*[_type == "post"]{
+				title,
+				slug,
+				mainImage{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				},
+				publishedAt
+			}`)
+			.then((data) => setPost(data))
+			.catch(console.error);
+	}, []);
 
 	const handleSelect = (selectedIndex, e) => {
 		setIndex(selectedIndex);
 	};
 
 	return (
-		<Carousel activeIndex={index} onSelect={handleSelect} fade >
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src={img1}
-					style={{ borderRadius: "10px", objectFit: "cover" }}
-					height="400px"
-					alt="First slide"
-				/>
-				<Carousel.Caption>
-					<h3>Website Launch</h3>
-					<p>View Event from the Events Page</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src={img2}
-					style={{ borderRadius: "10px", objectFit: "cover" }}
-					height="400px"
-					alt="Second slide"
-				/>
-
-				<Carousel.Caption>
-					<h3>Annual General Meeting</h3>
-					<p>View Event from the Events Page</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>
+		<Row>
+			<Carousel activeIndex={index} onSelect={handleSelect} fade>
+				{post && post.map((post, idx) => (
+					<Carousel.Item key={idx}>
+						<img
+							className="d-block w-100"
+							src={post.mainImage.asset.url}
+							style={{ borderRadius: "10px", objectFit: "cover" }}
+							height="400px"
+							alt={post.mainImage.alt}
+						/>
+						<Carousel.Caption>
+							<h3>{post.title}</h3>
+							<Link to={"/event/" + post.slug.current} key={post.slug.current}>
+								<Button>View Event</Button>
+							</Link>
+						</Carousel.Caption>
+					</Carousel.Item>
+				))}
+			</Carousel>
+		</Row>
 	);
 }
 

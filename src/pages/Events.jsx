@@ -3,21 +3,20 @@ import { useState, useEffect } from "react";
 // React Bootstrap Components
 import { Row, Col, Card } from "react-bootstrap";
 
+// Sanity CMS
+import sanityClient from "../client.js";
+
+// React Router Dom
+import { Link } from "react-router-dom";
+
 // Components
 import { Heading } from "../components";
 
 // Utilities Functions
-import useDocumentTitle from "../utilities/useDocumentTitle";
 import { handleTimeStamp } from "../utilities/handleTimestamp";
-
-// Sanity CMS
-import sanityClient from "../client.js";
-
-// React Router
-import { Link } from "react-router-dom";
+import useDocumentTitle from "../utilities/useDocumentTitle";
 
 const Events = () => {
-
 	useDocumentTitle("Events - Githiga SHG");
 
 	const [post, setPost] = useState(null);
@@ -62,8 +61,7 @@ const Events = () => {
 						</Link>
 					</Card>
 				</Col>
-			))
-			}
+			))}
 		</Row >
 	)
 }
