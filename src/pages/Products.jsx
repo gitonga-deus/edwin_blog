@@ -18,9 +18,6 @@ import mode from "../../assets/product/channel.svg"
 import member from "../../assets/product/membership.svg";
 
 const Membership = (props) => {
-
-	useDocumentTitle("Products - Githiga SHG")
-
 	return (
 		<Modal
 			{...props}
@@ -49,6 +46,7 @@ const Membership = (props) => {
 }
 
 const Products = () => {
+	useDocumentTitle("Products - Githiga SHG")
 
 	const [modalShow, setModalShow] = useState(false);
 

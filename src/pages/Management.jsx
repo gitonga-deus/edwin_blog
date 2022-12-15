@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // React Bootstrap
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Button, Modal } from "react-bootstrap";
 
 // Components
 import { Heading } from "../components";
@@ -11,7 +11,6 @@ import sanityClient from "../client"
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
-import members from "../../backend/schemas/members";
 
 const Management = () => {
 	useDocumentTitle("Management - Githiga SHG");
@@ -31,7 +30,8 @@ const Management = () => {
 						url
 					},
 					alt
-				}
+				},
+				bio
 			}`)
 			.then((data) => setPerson(data))
 			.catch(console.error)
@@ -62,13 +62,13 @@ const Management = () => {
 			<Heading title="Meet the Team" />
 			<div className="py-4 row text-center">
 				{person && person.map((item, index) => (
-					<Col lg={4} md={6} sm={6} key={index}>
+					<Col className="py-2" lg={4} md={6} sm={6} key={index}>
 						<span>
 							<img
 								className="img-thumbnail"
 								style={{
 									objectFit: "cover",
-									backgroundPosition: "cover",
+									backgroundPosition: "center",
 									height: "300px",
 									width: "240px"
 								}}
@@ -76,10 +76,10 @@ const Management = () => {
 								alt={item.image.alt}
 							/>
 						</span>
-						<span>
-							<h5>{item.title}</h5>
+						<div className="py-2 my-1">
+							<h5>{item.name}</h5>
 							<p>{item.rank}</p>
-						</span>
+						</div>
 					</Col>
 				))}
 			</div>
