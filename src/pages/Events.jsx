@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Row, Col, Card } from "react-bootstrap";
 
 // Sanity CMS
-import sanityClient from "../client.js";
+import sanityClient from "../client";
 
 // React Router Dom
 import { Link } from "react-router-dom";

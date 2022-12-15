@@ -1,30 +1,44 @@
+import { useState, useEffect } from "react";
+
 // React Bootstrap
 import { Row, Col, Card } from "react-bootstrap";
 
 // Components
 import { Heading } from "../components";
 
+// Sanity CMS
+import sanityClient from "../client"
+
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
-
-import hero from "../../assets/img1.jpg";
+import members from "../../backend/schemas/members";
 
 const Management = () => {
+	useDocumentTitle("Management - Githiga SHG");
 
-	useDocumentTitle("Management - Githiga SHG")
+	const [person, setPerson] = useState(null);
+
+	useEffect(() => {
+		sanityClient
+			.fetch(`*[_type == "members"]{
+				name,
+				rank,
+				email,
+				mobileNumber,
+				image{
+					asset->{
+						_id,
+						url
+					},
+					alt
+				}
+			}`)
+			.then((data) => setPerson(data))
+			.catch(console.error)
+	})
 
 	return (
 		<Row>
-			<Heading title="Meet the Team" />
-			<div className="py-4">
-				<img
-					className="d-block w-100"
-					src={hero}
-					style={{ borderRadius: "10px", objectFit: "cover" }}
-					height="400px"
-					alt="group photo"
-				/>
-			</div>
 			<Heading title="Leadership and Governance" />
 			<div className="py-4">
 				<p>
@@ -45,19 +59,30 @@ const Management = () => {
 					The group has an accountant who serves the members on daily basis in the physical office within the Parish compound. Services are fully automated with real time alert
 				</p>
 			</div>
-
-			{/* <Col sm={4} lg={4} md={4}>
-				<img src={placeholder} alt="Person" height="250px" width="auto" />
-			</Col>
-			<Col sm={8} md={8} lg={8}>
-				<h3>John Doe</h3>
-				<h6>Chairman</h6>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dignissimos odit iusto saepe. Rem sunt expedita iure, earum delectus commodi.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dignissimos odit iusto saepe. Rem sunt expedita iure, earum delectus commodi.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dignissimos odit iusto saepe. Rem sunt expedita iure, earum delectus commodi.
-				</p>
-			</Col> */}
+			<Heading title="Meet the Team" />
+			<div className="py-4 row text-center">
+				{person && person.map((item, index) => (
+					<Col lg={4} md={6} sm={6} key={index}>
+						<span>
+							<img
+								className="img-thumbnail"
+								style={{
+									objectFit: "cover",
+									backgroundPosition: "cover",
+									height: "300px",
+									width: "240px"
+								}}
+								src={item.image.asset.url}
+								alt={item.image.alt}
+							/>
+						</span>
+						<span>
+							<h5>{item.title}</h5>
+							<p>{item.rank}</p>
+						</span>
+					</Col>
+				))}
+			</div>
 		</Row >
 	);
 };
