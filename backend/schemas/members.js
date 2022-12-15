@@ -1,11 +1,26 @@
 export default {
-	name: "author",
-	title: "Author",
+	name: "members",
+	title: "Members",
 	type: "document",
 	fields: [
 		{
 			name: "name",
 			title: "Name",
+			type: "string",
+		},
+		{
+			name: "rank",
+			title: "Rank",
+			type: "string",
+		},
+		{
+			name: "email",
+			title: "Email Address",
+			type: "string",
+		},
+		{
+			name: "mobileNumber",
+			title: "Mobile Number",
 			type: "string",
 		},
 		{
