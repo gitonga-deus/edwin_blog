@@ -19,11 +19,11 @@ import useDocumentTitle from "../utilities/useDocumentTitle";
 const Events = () => {
 	useDocumentTitle("Events - Githiga SHG");
 
-	const [post, setPost] = useState(null);
+	const [event, setEvent] = useState(null);
 
 	useEffect(() => {
 		sanityClient
-			.fetch(`*[_type == "post"]{
+			.fetch(`*[_type == "event"]{
 				title,
 				slug,
 				mainImage{
@@ -35,28 +35,28 @@ const Events = () => {
 				},
 				publishedAt
 			}`)
-			.then((data) => setPost(data))
+			.then((data) => setEvent(data))
 			.catch(console.error);
 	}, []);
 
 	return (
 		<Row>
 			<Heading title="Events" />
-			{post && post.map((post, index) => (
+			{event && event.map((event, index) => (
 				<Col sm={6} md={6} lg={3} className="p-3" key={index}>
 					<Card style={{ borderRadius: "5px" }} className="shadow">
-						<Link to={"/event/" + post.slug.current} key={post.slug.current}>
+						<Link to={"/event/" + event.slug.current} key={event.slug.current}>
 							<span >
 								<img
 									className="d-block w-100 mb-3 events-img"
 									style={{ objectFit: "cover", height: "150px" }}
-									src={post.mainImage.asset.url}
-									alt={post.mainImage.alt}
+									src={event.mainImage.asset.url}
+									alt={event.mainImage.alt}
 								/>
 							</span>
 							<span className="text-center text-black events-title">
-								<h5>{post.title}</h5>
-								<p>{handleTimeStamp(post.publishedAt)}</p>
+								<h5>{event.title}</h5>
+								<p>{handleTimeStamp(event.publishedAt)}</p>
 							</span>
 						</Link>
 					</Card>
