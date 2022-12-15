@@ -4,9 +4,6 @@ import sanityClient from "../client.js";
 
 import { Link } from "react-router-dom";
 
-import img1 from "../../assets/img1.jpg"
-import img2 from "../../assets/img2.jpg"
-
 const Slider = () => {
 	const [post, setPost] = useState(null);
 	const [index, setIndex] = useState(0);
