@@ -1,19 +1,28 @@
 // React Bootstrap
-import { Row, Col, Button, Modal } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
 // Components
-import { Heading } from "../components";
-
-// Sanity CMS
-// import sanityClient from "../client"
+import { Heading, Person } from "../components";
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
+// Data
 import data from "../data.json";
+// import henry from "../../assets/team/placeholder_male.jpg"
+// import james from "../../assets/team/James.jpg"
+// import kennedy from "../../assets/team/Kennedy.jpg"
+// import hannah from "../../assets/team/Hannah.jpg"
+// import esther from "../../assets/team/placeholder_female.jpg"
+// import kanini from "../../assets/team/Kanini.jpg"
+// import peter from "../../assets/team/Peter.jpg"
+// import ngure from "../../assets/team/Ngure.jpg"
+// import john from "../../assets/team/John.jpg"
+
 
 const Management = () => {
 	useDocumentTitle("Management - Githiga SHG");
+
 	const { team } = data
 
 	return (
@@ -40,26 +49,10 @@ const Management = () => {
 			</div>
 			<Heading title="Meet the Team" />
 			<div className="py-4 row text-center">
-				{team.map((person, index) => (
-					<Col className="py-2" lg={4} md={6} sm={6} key={index}>
-						<span>
-							<img
-								className="img-thumbnail"
-								style={{
-									objectFit: "cover",
-									backgroundPosition: "center",
-									height: "300px",
-									width: "240px"
-								}}
-								src={person.imgUrl}
-								alt={person.name}
-							/>
-						</span>
-						<div className="py-2 my-1">
-							<h5>{person.name}</h5>
-							<p>{person.rank}</p>
-						</div>
-					</Col>
+				{team.map((item, index) => (
+					<div key={index}>
+						<Person {...item} />
+					</div>
 				))}
 			</div>
 		</Row >
