@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 // React Bootstrap
 import { Row, Col, Button, Modal } from "react-bootstrap";
 
@@ -7,35 +5,16 @@ import { Row, Col, Button, Modal } from "react-bootstrap";
 import { Heading } from "../components";
 
 // Sanity CMS
-import sanityClient from "../client"
+// import sanityClient from "../client"
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
+import data from "../data.json";
+
 const Management = () => {
 	useDocumentTitle("Management - Githiga SHG");
-
-	const [person, setPerson] = useState(null);
-
-	useEffect(() => {
-		sanityClient
-			.fetch(`*[_type == "members"]{
-				name,
-				rank,
-				email,
-				mobileNumber,
-				image{
-					asset->{
-						_id,
-						url
-					},
-					alt
-				},
-				bio
-			}`)
-			.then((data) => setPerson(data))
-			.catch(console.error)
-	})
+	const { team } = data
 
 	return (
 		<Row>
@@ -61,7 +40,7 @@ const Management = () => {
 			</div>
 			<Heading title="Meet the Team" />
 			<div className="py-4 row text-center">
-				{person && person.map((item, index) => (
+				{team.map((person, index) => (
 					<Col className="py-2" lg={4} md={6} sm={6} key={index}>
 						<span>
 							<img
@@ -72,13 +51,13 @@ const Management = () => {
 									height: "300px",
 									width: "240px"
 								}}
-								src={item.image.asset.url}
-								alt={item.image.alt}
+								src={person.imgUrl}
+								alt={person.name}
 							/>
 						</span>
 						<div className="py-2 my-1">
-							<h5>{item.name}</h5>
-							<p>{item.rank}</p>
+							<h5>{person.name}</h5>
+							<p>{person.rank}</p>
 						</div>
 					</Col>
 				))}

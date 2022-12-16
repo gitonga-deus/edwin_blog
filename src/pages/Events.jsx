@@ -17,6 +17,7 @@ import { handleTimeStamp } from "../utilities/handleTimestamp";
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
 const Events = () => {
+
 	useDocumentTitle("Events - Githiga SHG");
 
 	const [event, setEvent] = useState(null);
