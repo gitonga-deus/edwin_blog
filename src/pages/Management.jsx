@@ -48,6 +48,7 @@ const Management = () => {
 				</p>
 			</div>
 			<Heading title="Meet the Team" />
+			<Person />
 		</Row >
 	);
 };
