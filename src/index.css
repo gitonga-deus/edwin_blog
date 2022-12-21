@@ -79,10 +79,6 @@ a {
 	height: 250px;
 	object-fit: cover;
 	object-position: 40%;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	
 }
 
 .person-card .card-up {
@@ -95,7 +91,7 @@ a {
 .person-card .avatar {
 	margin-top: -100px;
 	overflow: hidden;
-	height: 220px;	
+	height: 220px;
 }
 
 .maroon-gradient {

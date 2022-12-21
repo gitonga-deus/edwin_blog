@@ -1,5 +1,4 @@
-import { Col, Card, Button } from "react-bootstrap";
-
+import { Col, Card, Button, Row } from "react-bootstrap";
 
 import henry from "../../assets/team/placeholder_male.jpg"
 import esther from "../../assets/team/placeholder_female.jpg"
@@ -118,13 +117,13 @@ const personInfo = [
 			"He is a member of the Capacity Building and Risk, Audit & Compliance Committee"
 		]
 	}
-]
+];
 
 const Person = () => {
 	return (
-		<>
+		<Row>
 			{personInfo.map((person, index) => (
-				<Col sm={6} md={6} lg={4} key={index}>
+				<Col sm={6} md={6} lg={4} key={index} className="py-2">
 					<Card className="mt-2 mb-3 person-card shadow">
 						<div className="card-up maroon-gradient"></div>
 						<div className="avatar mx-auto">
@@ -134,14 +133,11 @@ const Person = () => {
 							<h4 className="card-title font-weight-bold">{person.name}</h4>
 							<hr />
 							<p>{person.position}</p>
-							<Button>View More</Button>
 						</Card.Body>
 					</Card>
 				</Col>
 			))}
-		</>
-
-
+		</Row>
 	)
 }
 
