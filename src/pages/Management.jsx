@@ -48,13 +48,6 @@ const Management = () => {
 				</p>
 			</div>
 			<Heading title="Meet the Team" />
-			<div className="py-4 row text-center">
-				{team.map((item, index) => (
-					<div key={index}>
-						<Person {...item} />
-					</div>
-				))}
-			</div>
 		</Row >
 	);
 };
