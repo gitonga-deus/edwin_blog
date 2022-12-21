@@ -96,7 +96,7 @@ const Products = () => {
 		let result = [];
 		payment_channels.map((channel, i) => {
 			result.push(
-				<Col className="my-4 text-center" sm={6} md={6} lg={3} key={i}>
+				<Col className="my-4 text-center" sm={6} md={6} lg={4} key={i}>
 					<Card className="shadow" style={{
 						height: "200px"
 					}}>
@@ -105,7 +105,7 @@ const Products = () => {
 							<h4>{channel.name}</h4>
 						</Card.Header>
 						<Card.Body>
-							Acc No: {channel.accountNumber}
+							Account Number: {channel.accountNumber}
 						</Card.Body>
 					</Card>
 				</Col>
