@@ -45,7 +45,7 @@ const Slider = () => {
 						<Carousel.Caption>
 							<h3>{post.title}</h3>
 							<Link to={"/event/" + post.slug.current} key={post.slug.current}>
-								<Button>View Event</Button>
+								{/* <Button>View Event</Button> */}
 							</Link>
 						</Carousel.Caption>
 					</Carousel.Item>

@@ -39,9 +39,9 @@ a {
 }
 
 .btn {
-	background-color: #661111;
-	color: #fff;
-	border: none;
+	color: #661111;
+	background-color: #fff;
+	border: 1px solid #661111;
 }
 
 .btn:hover {

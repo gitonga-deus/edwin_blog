@@ -17,7 +17,7 @@ import { BsChatDots, BsTelephone } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 
 // Data for Contact Page
-import contacts from "../data.json"
+import data from "../utilities/data";
 
 const Contact = () => {
 
@@ -55,7 +55,7 @@ const Contact = () => {
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
 	}
 
-	const { location, address, emailAddress, phoneNumber } = contacts
+	const { location, address, emailAddress, phoneNumber } = data
 
 	return (
 		<>
@@ -96,7 +96,7 @@ const Contact = () => {
 						</div>
 					</Col>
 					<Col sm={7} md={7} lg={8}>
-						<Form onSubmit={sendEmail} className="py-4">
+						<Form onSubmit={sendEmail} className="py-3">
 							<Row>
 								<Col sm={6} md={6}>
 									<Form.Group className="mb-2 py-1" controlId="formBasicFullName">
@@ -135,10 +135,7 @@ const Contact = () => {
 									placeholder="Message" required onChange={handleChange}
 								/>
 							</Form.Group>
-							<Button className="mb-2" type="submit" style={{
-								backgroundColor: "#661111",
-								border: "none"
-							}}>
+							<Button className="mb-2" type="submit">
 								Send Message
 							</Button>
 						</Form>

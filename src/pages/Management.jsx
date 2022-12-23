@@ -7,24 +7,9 @@ import { Heading, Person } from "../components";
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
-// Data
-import data from "../data.json";
-// import henry from "../../assets/team/placeholder_male.jpg"
-// import james from "../../assets/team/James.jpg"
-// import kennedy from "../../assets/team/Kennedy.jpg"
-// import hannah from "../../assets/team/Hannah.jpg"
-// import esther from "../../assets/team/placeholder_female.jpg"
-// import kanini from "../../assets/team/Kanini.jpg"
-// import peter from "../../assets/team/Peter.jpg"
-// import ngure from "../../assets/team/Ngure.jpg"
-// import john from "../../assets/team/John.jpg"
-
-
 const Management = () => {
 	useDocumentTitle("Management - Githiga SHG");
-
-	const { team } = data
-
+	
 	return (
 		<Row>
 			<Heading title="Leadership and Governance" />

@@ -10,12 +10,7 @@ import { Heading } from "../components";
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
 // Products Data
-import data from "../data.json"
-
-// SVG Icons
-import img from "../../assets/product/loan.svg"
-import mode from "../../assets/product/channel.svg"
-import member from "../../assets/product/membership.svg";
+import data from "../utilities/data";
 
 const Membership = (props) => {
 	return (
@@ -32,7 +27,7 @@ const Membership = (props) => {
 			</Modal.Header>
 			<Modal.Body>
 				<h4>Registration Requirements</h4>
-				{data.membership_requirements.map((requirement, i) => (
+				{data.membershipRequirements.map((requirement, i) => (
 					<ul key={i}>
 						<li>{requirement}</li>
 					</ul>
@@ -50,21 +45,21 @@ const Products = () => {
 
 	const [modalShow, setModalShow] = useState(false);
 
-	const { loan_products, membership_products, payment_channels } = data;
+	const { loanProducts, membershipProducts, paymentChannel } = data
 
 	const renderLoan = () => {
 		let result = [];
-		loan_products.map((loan, i) => {
+		loanProducts.map((loan, index) => {
 			result.push(
-				<Col sm={6} md={6} lg={4} key={i} className="my-2 p-3 text-center">
+				<Col sm={6} md={6} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
 						height: "250px"
 					}}>
-						<Card.Header className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
-							<img src={img} alt={`${loan.loanType} Loan`} height="50px" className="m-1" />
-							<h4>{loan.loanType}</h4>
-						</Card.Header>
-						<Card.Body className="p-2">{loan.description}</Card.Body>
+						<div className="p-3 text-center" >
+							<img src={loan.icon} alt={`${loan.loanType}`} height="60px" className="m-1" />
+						</div>
+						<h4>{loan.loanType}</h4>
+						<p className="p-2">{loan.description}</p>
 					</Card>
 				</Col >
 			)
@@ -74,17 +69,17 @@ const Products = () => {
 
 	const renderMembership = () => {
 		let result = [];
-		membership_products.map((membership, i) => {
+		membershipProducts.map((membership, index) => {
 			result.push(
-				<Col sm={12} md={12} lg={4} key={i} className="my-2 p-3 text-center">
+				<Col sm={12} md={12} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
-						height: "230px"
+						height: "250px"
 					}}>
-						<Card.Header className="p-3 text-center" style={{ backgroundColor: "#661111", color: "#fff" }}>
-							<img src={member} alt={`${membership.type} Loan`} height="50px" className="m-1" />
-							<h4>{membership.type}</h4>
-						</Card.Header>
-						<Card.Body className="p-2">{membership.description}</Card.Body>
+						<div className="p-3 text-center">
+							<img src={membership.icon} alt={`${membership.type}`} height="60px" className="m-1" />
+						</div>
+						<h4>{membership.type}</h4>
+						<p className="p-2">{membership.description}</p>
 					</Card>
 				</Col >
 			)
@@ -94,19 +89,17 @@ const Products = () => {
 
 	const renderPaymentChannel = () => {
 		let result = [];
-		payment_channels.map((channel, i) => {
+		paymentChannel.map((channel, index) => {
 			result.push(
-				<Col className="my-4 text-center" sm={6} md={6} lg={4} key={i}>
+				<Col className="my-4 text-center" sm={6} md={6} lg={4} key={index}>
 					<Card className="shadow" style={{
-						height: "200px"
+						height: "auto"
 					}}>
-						<Card.Header className="p-3" style={{ backgroundColor: "#661111", color: "#fff", alignItems: "center" }}>
-							<img src={mode} alt={`${channel.name} Loan`} height="50px" className="m-1" />
-							<h4>{channel.name}</h4>
-						</Card.Header>
-						<Card.Body>
-							Account Number: {channel.accountNumber}
-						</Card.Body>
+						<div className="p-3">
+							<img src={channel.icon} alt={`${channel.name}`} height="60px" className="m-1" />
+						</div>
+						<h4>{channel.name}</h4>
+						<p className="p-2">Account Number: {channel.accountNumber}</p>
 					</Card>
 				</Col>
 			)
@@ -123,8 +116,8 @@ const Products = () => {
 
 			<Heading title="Membership" />
 			<div className="text-center">
-				<p><strong>NOTE:</strong>{" "}
-					Membership is a requirement for all persons to be able to access loan products and the benefits associated with becoming a member of our society.
+				<p>
+					Membership is a requirement for all persons to be able to access loan products and the benefits associated with becoming a member of the self-help group.
 				</p>
 				<Button onClick={() => setModalShow(true)}>Become a Member</Button>
 			</div>

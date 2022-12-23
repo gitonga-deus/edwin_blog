@@ -32,7 +32,7 @@ const Home = () => {
 					The management is committed to serving its members with diligence and utmost customer care services. Members are proud to save with convenience using modern computer technology to receive seamless services not necessarily involving physical human persons. They have access to credit daily whenever the need arises.
 				</p>
 				<p>
-					Membership is drawn from all regions, including the diaspora as make the best use of technology
+					Membership is drawn from all regions, including the diaspora as make the best use of technology.
 				</p>
 			</div>
 
@@ -43,7 +43,7 @@ const Home = () => {
 							height: "80px"
 						}} />
 					</div>
-					<div className="px-2">
+					<div className="px-4">
 						<h4>{item.title}</h4>
 						<p>{item.description}</p>
 					</div>

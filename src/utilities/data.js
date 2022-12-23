@@ -14,6 +14,14 @@ import mission from "../../assets/home/mission.svg";
 import vision from "../../assets/home/vision.svg";
 import value from "../../assets/home/value.svg";
 
+// Product Icons
+import loan from "../../assets/product/loan.svg"
+import mode from "../../assets/product/channel.svg"
+import individual from "../../assets/product/individuals.svg"
+import corporate from "../../assets/product/corporate.svg"
+import minor from "../../assets/product/minor.svg"
+
+
 const data = {
 	personData: [
 		{
@@ -108,6 +116,87 @@ const data = {
 			icon: value,
 			description: "Accountability, Honesty, Integrity, Transparency, and Teamwork."
 		}
+	],
+
+	loanProducts: [
+		{
+			loanType: "Development Loan",
+			icon: loan,
+			description: "This is an all-purpose loan granted to all members individually or corporates to finance development projects"
+		},
+		{
+			loanType: "Emergency Loan",
+			icon: loan,
+			description: "This is a loan that is granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+		},
+		{
+			loanType: "Education Loan",
+			icon: loan,
+			description: "This is a loan that is granted to members to finance education needs e.g tuition fees, books and related expenses"
+		},
+		{
+			loanType: "Business Loan",
+			icon: loan,
+			description: "This loan product is designed to finance trading activities. The loan shall be advanced to ongoing businesses only"
+		},
+		{
+			loanType: "Agribusiness Loan",
+			icon: loan,
+			description: "This is a loan that is granted for agricultural purposes aimed at promoting agriculture for food security, improved livelihoods."
+		},
+		{
+			loanType: "Church Loan",
+			icon: loan,
+			description: "This loan is granted to Catholic Churches only through the Parish pastoral."
+		},
+	],
+
+	membershipProducts: [
+		{
+			type: "Individuals Accounts",
+			icon: individual,
+			description: "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the self-help group."
+		},
+		{
+			type: "Corporate Accounts",
+			icon: corporate,
+			description: "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the self-help group."
+		},
+		{
+			type: "Minor Accounts",
+			icon: minor,
+			description: "This membership is granted to individuals who are below 18 years and are willing to save and borrow from the self-help group."
+		}
+	],
+
+	paymentChannel: [
+		{
+			name: "GDC",
+			icon: mode,
+			accountNumber: "120008000700"
+		},
+		{
+			name: "Caritas MFB",
+			icon: mode,
+			accountNumber: "1002025000057"
+		},
+		{
+			name: "KCB",
+			icon: mode,
+			accountNumber: "1101918799"
+		}
+	],
+
+	emailAddress: "shg@githiga.caritasnairobishp.org",
+	phoneNumber: "+254 710 273 227",
+	address: "P.O. Box 1107 - 00900",
+	location: "Kiambu",
+
+	membershipRequirements: [
+		"National I.D Card Copy",
+		"A copy of KRA PIN",
+		"A copy of Next of Kin National ID",
+		"Birth Certificate / Baptism Card for Minor Accounts."
 	]
 }
 
