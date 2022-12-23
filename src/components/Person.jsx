@@ -18,7 +18,7 @@ const PersonModal = (props) => {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h5>Phone Number : {props.phone}</h5>
+				<h5>Mobile Number : {props.phone}</h5>
 				<h5>Email Address : {props.email}</h5>
 				<p>{props.bio}</p>
 			</Modal.Body>

@@ -1,3 +1,4 @@
+// Members
 import henry from "../../assets/team/placeholder_male.jpg"
 import esther from "../../assets/team/placeholder_female.jpg"
 import james from "../../assets/team/James.jpg"
@@ -7,6 +8,11 @@ import kanini from "../../assets/team/Kanini.jpg"
 import peter from "../../assets/team/Peter.jpg"
 import ngure from "../../assets/team/Ngure.jpg"
 import john from "../../assets/team/John.jpg"
+
+// Home Icons
+import mission from "../../assets/home/mission.svg";
+import vision from "../../assets/home/vision.svg";
+import value from "../../assets/home/value.svg";
 
 const data = {
 	personData: [
@@ -83,6 +89,24 @@ const data = {
 			emailAddress: "--",
 			image: john,
 			bio: "He operates a tailoring business and has attended several marketing seminars and workshops. He is a member of the Capacity Building and Risk, Audit & Compliance Committee"
+		}
+	],
+
+	homeIcons: [
+		{
+			title: "Vision",
+			icon: vision,
+			description: "To be the preferred community-based financial service provider"
+		},
+		{
+			title: "Mission",
+			icon: mission,
+			description: "To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles."
+		},
+		{
+			title: "Core Values",
+			icon: value,
+			description: "Accountability, Honesty, Integrity, Transparency, and Teamwork."
 		}
 	]
 }

@@ -1,5 +1,5 @@
 // React Bootstrap
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 // Components
 import { Heading, Slider } from "../components";
@@ -7,10 +7,8 @@ import { Heading, Slider } from "../components";
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
 
-// SVG Icons
-import mission from "../../assets/home/mission.svg";
-import vision from "../../assets/home/vision.svg";
-import value from "../../assets/home/value.svg";
+// Website Data
+import data from "../utilities/data";
 
 const Home = () => {
 	useDocumentTitle("Home - Githiga SHG")
@@ -37,39 +35,20 @@ const Home = () => {
 					Membership is drawn from all regions, including the diaspora as make the best use of technology
 				</p>
 			</div>
-			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "300px" }} className="shadow">
-					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
-						<img src={vision} height="60px" width="60px" alt="Vision" />
-						<h3 className="py-1">Vision</h3>
-					</Card.Header>
-					<span className="p-3">
-						To be the preferred community-based financial service provider.
-					</span>
-				</Card>
-			</Col>
-			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "300px" }} className="shadow">
-					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
-						<img src={mission} height="60px" width="60px" alt="Mission" />
-						<h3 className="py-1">Mission</h3>
-					</Card.Header>
-					<span className="p-3">
-						To empower the members economically through saving mobilization, providing affordable credit, and prudent investment by applying transformative management styles.
-					</span>
-				</Card>
-			</Col>
-			<Col className="my-4 text-center" sm={12} md={12} lg={4}>
-				<Card style={{ height: "300px" }} className="shadow">
-					<Card.Header style={{ backgroundColor: "#661111", color: "#fff", padding: "10px" }}>
-						<img src={value} height="60px" width="60px" alt="Core Values" />
-						<h3 className="py-1">Core Values</h3>
-					</Card.Header>
-					<span className="p-3">
-						Accountability, Honesty, Integrity, Transparency, and Teamwork.
-					</span>
-				</Card>
-			</Col>
+
+			{data.homeIcons.map((item, index) => (
+				<Col className="my-4 text-center" sm={12} md={12} lg={4} key={index}>
+					<div className="py-3">
+						<img src={item.icon} alt={item.title} style={{
+							height: "80px"
+						}} />
+					</div>
+					<div className="px-2">
+						<h4>{item.title}</h4>
+						<p>{item.description}</p>
+					</div>
+				</Col>
+			))}
 		</Row >
 	)
 }
