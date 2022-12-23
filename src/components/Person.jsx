@@ -14,12 +14,13 @@ const PersonModal = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					More Info
+					More Information
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h5>Mobile Number : {props.phone}</h5>
-				<h5>Email Address : {props.email}</h5>
+				<img src={props.image} alt={props.name} className="img-thumbnail modal-img" />
+				<h5 className="py-2">{props.name} - {props.position}</h5>
+
 				<p>{props.bio}</p>
 			</Modal.Body>
 			<Modal.Footer>
@@ -32,8 +33,8 @@ const PersonModal = (props) => {
 
 const Person = () => {
 
-	const getData = (phone, email, bio) => {
-		let tempData = [phone, email, bio];
+	const getData = (image, name, position, bio) => {
+		let tempData = [image, name, position, bio];
 
 		setTempData(item => [1, ...tempData]);
 
@@ -56,12 +57,12 @@ const Person = () => {
 							<h4 className="card-title font-weight-bold">{person.name}</h4>
 							<hr />
 							<p>{person.position}</p>
-							<Button onClick={() => getData(person.phoneNumber, person.emailAddress, person.bio)}>More</Button>
+							<Button onClick={() => getData(person.image, person.name, person.position, person.bio)}>More</Button>
 						</Card.Body>
 					</Card>
 				</Col>
 			))}
-			<PersonModal show={modal} onHide={() => setModal(false)} phone={tempData[1]} email={tempData[2]} bio={tempData[3]} />
+			<PersonModal show={modal} onHide={() => setModal(false)} image={tempData[1]} name={tempData[2]} position={tempData[3]} bio={tempData[4]} />
 		</Row>
 	)
 }

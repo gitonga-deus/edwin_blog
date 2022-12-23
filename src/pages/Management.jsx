@@ -1,5 +1,5 @@
 // React Bootstrap
-import { Row, Col, Button } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 // Components
 import { Heading, Person } from "../components";
