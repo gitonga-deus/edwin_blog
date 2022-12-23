@@ -18,8 +18,9 @@ const PersonModal = (props) => {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h4>Registration Requirements</h4>
-				
+				<h5>Phone Number : {props.phone}</h5>
+				<h5>Email Address : {props.email}</h5>
+				<p>{props.bio}</p>
 			</Modal.Body>
 			<Modal.Footer>
 				<Button onClick={props.onHide}>Close</Button>
@@ -60,7 +61,7 @@ const Person = () => {
 					</Card>
 				</Col>
 			))}
-			<PersonModal show={modal} onHide={() => setModal(false)} />
+			<PersonModal show={modal} onHide={() => setModal(false)} phone={tempData[1]} email={tempData[2]} bio={tempData[3]} />
 		</Row>
 	)
 }
