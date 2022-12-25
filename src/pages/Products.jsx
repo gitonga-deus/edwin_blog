@@ -117,14 +117,15 @@ const Products = () => {
 			<Heading title="Membership" />
 			<div className="text-center">
 				<p>
-					Membership is a requirement for all persons to be able to access loan products and the benefits associated with becoming a member of the self-help group.
+					It’s a requirement to be a legitimate member to qualify for loan products and
+					other privileges of the self-help group.
 				</p>
 				<Button onClick={() => setModalShow(true)}>Become a Member</Button>
 			</div>
 			{renderMembership()}
 			<Heading title="Loan Products" />
 			<div className="text-center">
-				<p><strong>NOTE:</strong>{" "}
+				<p>
 					Members are entitled to different loans but will limited to only one type of loan product at any given time.
 				</p>
 			</div>

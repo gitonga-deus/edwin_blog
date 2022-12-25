@@ -23,6 +23,12 @@ import minor from "../../assets/product/minor.svg"
 
 
 const data = {
+	homeData: [
+		"St. John Evangelist Githiga Catholic Church Self-Help Group was established in 1993 in Githiga Parish of the Archdiocese of Nairobi.It is an inclusive group that does not discriminate against anyone due to age, religion, social status, or otherwise.It is among many others that operate within Parishes in the Archdiocese of Nairobi.",
+		"Like the rest, it was established to economically empower individuals and communities through financial inclusion.Its most important activities include savings mobilization and accessing affordable credit for its members.To date, the group has a membership of 1006 members whose deposits have accumulated to Ksh 45m",
+		"The management is committed to serving its members with diligence and utmost customer care services.Members are proud to save with convenience using modern computer technology to receive seamless services not necessarily involving physical human persons.They have access to credit daily whenever the need arises.",
+		"Membership is drawn from all regions, including the Diaspora making the best use of technology."
+	],
 	personData: [
 		{
 			name: "Henry Kiritu",
@@ -30,7 +36,7 @@ const data = {
 			image: henry,
 			phoneNumber: "--",
 			emailAddress: "--",
-			bio: "He is the Patron of the group. He gives the pastoral direction of the group. He is also a mandatory signature on all financial transactions. He has been very instrumental in the promotion and guidance of the group"
+			bio: "Fr. Henry Kiritu is the patron of the Self Help Group as enshrined in the guideline, being the parish priest.The patron plays a crucial role in the management by	maintaining the Catholic faith tradition.In particular, he gives spiritual nourishment and guidance to ensure harmony in the entire governance ecosystem."
 
 		},
 		{
@@ -39,7 +45,7 @@ const data = {
 			phoneNumber: "0722252068",
 			emailAddress: "makenaj2@gmail.com",
 			image: james,
-			bio: "He chairs all the group meetings and represents the self-help group in all stairs of the governance hierarchy. He is an expert in governance and leadership with extensive experience in financial institutions, especially SACCOs.He holds a Bachelor's Degree in Public Administration & Governance, a Diploma in Social Development, and a Certificate in Animal Health. He is also an Accredited Professional Mediator and practices both court-annexed and private."
+			bio: "James chairs all the group meetings and represents the self-help group in all stairs of the governance hierarchy.He is an expert in governance and leadership with extensive experience in financial institutions, especially SACCOs.He holds a Bachelor's Degree in Public Administration & Governance, a Diploma in Social Development, and a Certificate in Animal Health.He is also an Accredited Professional Mediator.He practices both court- annexed and private mediation."
 		},
 		{
 			name: "Kennedy Ngoro Mutugi",
@@ -47,7 +53,7 @@ const data = {
 			phoneNumber: "--",
 			emailAddress: "--",
 			image: kennedy,
-			bio: "He holds a Diploma in Computer Management, Service & Repair, and a Certificate in Electronics Science. He currently operates a service business with an electronics workshop. In the group, he chairs the Capacity Building Committee which deals with member's education and business development"
+			bio: "He chairs the Capacity Building Committee that deals with members’ education and business development. Kennedy holds a Diploma in Computer Management, Service & Repair and a Certificate in Electronics Science. He currently operates a	service business with an electronics workshop."
 		},
 		{
 			name: "Hannah Wanjiru Ng'ang'a",
@@ -55,7 +61,7 @@ const data = {
 			phoneNumber: "--",
 			emailAddress: "wanjiruhannah665@gmail.com",
 			image: hannah,
-			bio: "She holds a Diploma in Clearing & Forwarding and has also done 10 Computer Packages. As a Treasurer, she is the custodian of all group's assets both physical and financial.She also chairs the Finance & Budget Committee."
+			bio: "As the treasurer, she is the custodian of all group's assets. She also chairs the Finance & Budget Committee. She holds a Diploma in Clearing & Forwarding and has also done 10 Computer Packages."
 		},
 		{
 			name: "Esther Njeri Kinyuru",
@@ -63,7 +69,7 @@ const data = {
 			phoneNumber: "--",
 			emailAddress: "--",
 			image: esther,
-			bio: "She holds a Diploma in Early Childhood Development. Currently a full-time ECD Teacher. As the secretary, she writes and documents all the group's deliberations and resolutions. She also chairs the Risk, Audit & Compliance."
+			bio: "As the secretary, Esther writes and documents all the group's deliberations and resolutions. She also chairs the Risk, Audit & Compliance. She holds a Diploma in Early Childhood Development. Currently a full-time ECD Teacher."
 		},
 		{
 			name: "Samuel Kanini Kamau",
@@ -71,7 +77,7 @@ const data = {
 			phoneNumber: "0720996911",
 			emailAddress: "--",
 			image: kanini,
-			bio: "He is a CPA-K Profession. He oversees the operations of the group including Finance, Promotion, and Customer Service. He is also the liaison between members and the management committee."
+			bio: "Samuel manages the group operations, including but not limited to financial management, group promotion and marketing and customer care service. He is also the liaison between members and the management committee. He holds a CPA-K."
 
 		},
 		{
@@ -80,7 +86,7 @@ const data = {
 			phoneNumber: "0727525648",
 			emailAddress: "petrinel2012@gmail.com",
 			image: peter,
-			bio: "He holds a Bachelor's Degree in Philosophy and a Certificate in Teaching. He is the secretary of the Finance & Budget Committee as well as a member of the Risk, Audit & Compliance Committee."
+			bio: "He is the secretary of the Finance & Budget Committee as well as a member of the Risk, Audit & Compliance Committee. Peter holds a Bachelor's Degree in Philosophy and a Certificate in Teaching."
 		},
 		{
 			name: "Samuel Ngure Mburu",
@@ -88,7 +94,7 @@ const data = {
 			phoneNumber: "0722876992",
 			emailAddress: "samulenguremburu@gmail.com",
 			image: ngure,
-			bio: "He is a seasonal artisan in Building and Construction. He is a member of the Capacity Building Committee and Finance & Budget"
+			bio: "He is a member of the Capacity Building Committee and Finance & Budget. Professionally, Samuel is a seasonal artisan in Building and Construction."
 		},
 		{
 			name: "John Maingi Kimani",
@@ -96,7 +102,7 @@ const data = {
 			phoneNumber: "0727900354",
 			emailAddress: "--",
 			image: john,
-			bio: "He operates a tailoring business and has attended several marketing seminars and workshops. He is a member of the Capacity Building and Risk, Audit & Compliance Committee"
+			bio: "He is a Capacity Building and Risk, Audit & Compliance Committee member. He operates a tailoring business and has attended several marketing seminars and workshops."
 		}
 	],
 
