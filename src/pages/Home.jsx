@@ -39,7 +39,7 @@ const Home = () => {
 						}} />
 					</div>
 					<div className="px-4">
-						<h4>{item.title}</h4>
+						<h4 className="clr">{item.title}</h4>
 						<p>{item.description}</p>
 					</div>
 				</Col>

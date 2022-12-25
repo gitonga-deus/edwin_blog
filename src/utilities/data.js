@@ -177,16 +177,19 @@ const data = {
 
 	paymentChannel: [
 		{
+			id: 1,
 			name: "GDC",
 			icon: mode,
 			accountNumber: "120008000700"
 		},
 		{
+			id: 2,
 			name: "Caritas MFB",
 			icon: mode,
 			accountNumber: "1002025000057"
 		},
 		{
+			id: 3,
 			name: "KCB",
 			icon: mode,
 			accountNumber: "1101918799"

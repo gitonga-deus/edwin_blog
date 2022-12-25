@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 // React Bootstrap
-import { Col, Row, Card, Button, Modal } from "react-bootstrap";
+import { Col, Row, Card, Button, Modal, InputGroup, Form } from "react-bootstrap";
 
 // Components
 import { Heading } from "../components";
@@ -44,21 +44,29 @@ const Products = () => {
 	useDocumentTitle("Products - Githiga SHG")
 
 	const [modalShow, setModalShow] = useState(false);
-
-	const { loanProducts, membershipProducts, paymentChannel } = data
+	
+	const { loanProducts, membershipProducts, paymentChannel } = data;
+	
+	const textInput = useRef(null);
+	const handleCopy = (id) => {
+		const el = paymentChannel.find(item => item.id === id);
+		navigator.clipboard.writeText(el.accountNumber).then(() => {
+			console.log(el.accountNumber)
+		});
+	};
 
 	const renderLoan = () => {
 		let result = [];
 		loanProducts.map((loan, index) => {
 			result.push(
-				<Col sm={6} md={6} lg={4} key={index} className="my-2 p-3 text-center">
+				<Col sm={12} md={12} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
-						height: "250px"
+						height: "280px"
 					}}>
 						<div className="p-3 text-center" >
 							<img src={loan.icon} alt={`${loan.loanType}`} height="60px" className="m-1" />
 						</div>
-						<h4>{loan.loanType}</h4>
+						<h4 className="clr">{loan.loanType}</h4>
 						<p className="p-2">{loan.description}</p>
 					</Card>
 				</Col >
@@ -73,12 +81,12 @@ const Products = () => {
 			result.push(
 				<Col sm={12} md={12} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
-						height: "250px"
+						height: "290px"
 					}}>
 						<div className="p-3 text-center">
 							<img src={membership.icon} alt={`${membership.type}`} height="60px" className="m-1" />
 						</div>
-						<h4>{membership.type}</h4>
+						<h4 className="clr">{membership.type}</h4>
 						<p className="p-2">{membership.description}</p>
 					</Card>
 				</Col >
@@ -91,15 +99,27 @@ const Products = () => {
 		let result = [];
 		paymentChannel.map((channel, index) => {
 			result.push(
-				<Col className="my-4 text-center" sm={6} md={6} lg={4} key={index}>
+				<Col className="my-4 py-2 text-center" sm={12} md={12} lg={4} key={index}>
 					<Card className="shadow" style={{
 						height: "auto"
 					}}>
 						<div className="p-3">
 							<img src={channel.icon} alt={`${channel.name}`} height="60px" className="m-1" />
 						</div>
-						<h4>{channel.name}</h4>
-						<p className="p-2">Account Number: {channel.accountNumber}</p>
+						<h4 className="clr">{channel.name}</h4>
+						<InputGroup className="mb-3" style={{ width: "90%", margin: "0 auto" }}>
+							<Form.Control
+								value={`Account No: ${channel.accountNumber}`}
+								aria-label="Recipient's username"
+								ref={textInput}
+								aria-describedby="basic-addon2"
+								disabled
+								style={{ borderRadius: "2px", backgroundColor: "#ffffff" }}
+							/>
+							<Button style={{ borderRadius: "2px" }} onClick={() => handleCopy(channel.id)}>
+								Copy
+							</Button>
+						</InputGroup>
 					</Card>
 				</Col>
 			)

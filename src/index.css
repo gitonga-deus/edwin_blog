@@ -38,6 +38,16 @@ a {
 	padding-top: 20px;
 }
 
+.clr {
+	color: #661111;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.accNumber {
+	border-radius: 2px;
+}
+
 .btn {
 	color: #661111;
 	background-color: #fff;
