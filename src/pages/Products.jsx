@@ -84,7 +84,7 @@ const Products = () => {
 						height: "290px"
 					}}>
 						<div className="p-3 text-center">
-							<img src={membership.icon} alt={`${membership.type}`} height="60px" className="m-1" />
+							<img src={membership.icon} alt={`${membership.type}`} height="65px" className="m-1" />
 						</div>
 						<h4 className="clr">{membership.type}</h4>
 						<p className="p-2">{membership.description}</p>
