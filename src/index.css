@@ -1,4 +1,6 @@
-@import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2');
+/* @import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2'); */
+
+@import url('https://fonts.cdnfonts.com/css/dm-sans');
 
 html,
 body {
@@ -6,8 +8,9 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	color: #000;
-	font-family: 'Trebuchet MS', sans-serif;
-	font-size: 16px;
+	/* font-family: 'Trebuchet MS', sans-serif; */
+	font-family: 'DM Sans', sans-serif;
+	font-size: 15px;
 	line-height: 30px;
 	font-weight: 400;
 }

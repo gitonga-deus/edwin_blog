@@ -18,7 +18,7 @@ const Home = () => {
 		<Row>
 			<Heading title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
 
-			<div className="py-4">
+			<div className="py-1">
 				<Slider />
 			</div>
 

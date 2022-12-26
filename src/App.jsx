@@ -12,7 +12,7 @@ import { Container } from "react-bootstrap"
 const App = () => {
 	return (
 		<main>
-			<div className="py-3 page-container">
+			<div className="page-container">
 				<Navigation />
 				<Container>
 					<Routes>
