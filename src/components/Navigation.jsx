@@ -1,29 +1,23 @@
-import { useState } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
+
+import { NavLink } from "react-router-dom"
+
 import logo from "../../assets/logo/logo.svg";
-import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
-	const [expanded, setExpanded] = useState(false);
-
-	const toggleExpanded = () => {
-		setExpanded(!expanded);
-	};
-
 	return (
-		<Navbar expand="lg" style={{ alignItems: "center" }} expanded={expanded}>
+		<Navbar collapseOnSelect expand="lg">
 			<Container>
-				<Navbar.Brand href="/">
-					<img src={logo} alt="Githiga SHG Logo" />
+				<Navbar.Brand href="#home">
+					<img src={logo} alt="Githiga SHG" />
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleExpanded} />
-				<Navbar.Collapse breakpoint="lg" className={expanded ? "show" : ""}>
-					<Nav className="navbar-fixed-top justify-content-end" style={{ width: "100%" }}>
-						<Nav.Link to="/" as={NavLink} onClick={toggleExpanded}>Home</Nav.Link>
-						<Nav.Link to="/management" as={NavLink} onClick={toggleExpanded}>Management</Nav.Link>
-						<Nav.Link to="/product" as={NavLink} onClick={toggleExpanded}>Products</Nav.Link>
-						{/* <Nav.Link to="/event" as={NavLink} onClick={toggleExpanded}>Events</Nav.Link> */}
-						<Nav.Link to="/contact" as={NavLink} onClick={toggleExpanded}>Contact Us</Nav.Link>
+				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+				<Navbar.Collapse id="responsive-navbar-nav">
+					<Nav className="justify-content-end" style={{ width: "100%" }}>
+						<Nav.Link to="/" as={NavLink}>Home</Nav.Link>
+						<Nav.Link to="/management" as={NavLink}>Management</Nav.Link>
+						<Nav.Link to="/products" as={NavLink}>Products</Nav.Link>
+						<Nav.Link to="/contact" as={NavLink}>Contact Us</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>
