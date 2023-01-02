@@ -82,7 +82,7 @@ const data = {
 		},
 		{
 			name: "Peter Mbugua Matiru",
-			position: "--",
+			position: "Member",
 			phoneNumber: "0727525648",
 			emailAddress: "petrinel2012@gmail.com",
 			image: peter,
@@ -90,7 +90,7 @@ const data = {
 		},
 		{
 			name: "Samuel Ngure Mburu",
-			position: "--",
+			position: "Member",
 			phoneNumber: "0722876992",
 			emailAddress: "samulenguremburu@gmail.com",
 			image: ngure,
@@ -98,7 +98,7 @@ const data = {
 		},
 		{
 			name: "John Maingi Kimani",
-			position: "--",
+			position: "Member",
 			phoneNumber: "0727900354",
 			emailAddress: "--",
 			image: john,
