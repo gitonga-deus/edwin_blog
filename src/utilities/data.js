@@ -21,6 +21,11 @@ import individual from "../../assets/product/individuals.svg"
 import corporate from "../../assets/product/corporate.svg"
 import minor from "../../assets/product/minor.svg"
 
+// Membership Registration Forms
+import minorForm from "../../assets/docs/minor-reg-form.pdf"
+import memberForm from "../../assets/docs/member-reg-form.pdf"
+import corporateForm from "../../assets/docs/corporate-reg-form.pdf"
+
 
 const data = {
 	homeData: [
@@ -161,16 +166,19 @@ const data = {
 		{
 			type: "Individuals Accounts",
 			icon: individual,
+			registrationForm: memberForm,
 			description: "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the self-help group."
 		},
 		{
 			type: "Corporate Accounts",
 			icon: corporate,
+			registrationForm: corporateForm,
 			description: "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the self-help group."
 		},
 		{
 			type: "Minor Accounts",
 			icon: minor,
+			registrationForm: minorForm,
 			description: "This membership is granted to individuals who are below 18 years and are willing to save and borrow from the self-help group."
 		}
 	],
