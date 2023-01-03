@@ -22,28 +22,16 @@ const Membership = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					Registration Requirements
+					{props.type}
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h4>Corporate Membership Account</h4>
-				{data.corporateMembership.map((requirement, i) => (
-					<ul key={i}>
-						<li>{requirement}</li>
-					</ul>
-				))}
-				<h4>Individual Membership Account</h4>
-				{data.individualMembership.map((requirement, i) => (
-					<ul key={i}>
-						<li>{requirement}</li>
-					</ul>
-				))}
-				<h4>Minor Membership Account</h4>
-				{data.minorMembership.map((requirement, i) => (
-					<ul key={i}>
-						<li>{requirement}</li>
-					</ul>
-				))}
+				<span>
+					{props.registrationRequirements}
+				</span>
+				<a href={props.registrationForm} target="_blank" rel="noopener noreferrer">
+					<Button>Download Registration Form</Button>
+				</a>
 			</Modal.Body>
 			<Modal.Footer>
 				<Button onClick={props.onHide}>Close</Button>
@@ -56,6 +44,7 @@ const Products = () => {
 	useDocumentTitle("Products - Githiga SHG")
 
 	const [modalShow, setModalShow] = useState(false);
+	const [tempData, setTempData] = useState([])
 
 	const { loanProducts, membershipProducts, paymentChannel } = data;
 
@@ -66,6 +55,14 @@ const Products = () => {
 			alert(`Acc number copied successfully: ${el.accountNumber}`)
 		});
 	};
+
+	const getData = (type, registrationRequirements, registrationForm) => {
+		let tempData = [type, registrationRequirements, registrationForm];
+
+		setTempData(item => [1, ...tempData]);
+
+		return setModalShow(true)
+	}
 
 	const renderLoan = () => {
 		let result = [];
@@ -93,16 +90,16 @@ const Products = () => {
 			result.push(
 				<Col sm={12} md={12} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
-						height: "350px"
+						height: "345px"
 					}}>
 						<div className="p-3 text-center">
 							<img src={membership.icon} alt={`${membership.type}`} height="65px" className="m-1" />
 						</div>
 						<h4 className="clr">{membership.type}</h4>
 						<p className="p-2">{membership.description}</p>
-						<a href={membership.registrationForm} target="_blank" rel="noopenner noreferrer">
-							<Button>Download Registration Form</Button>
-						</a>
+						<div>
+							<Button onClick={() => getData(membership.type, membership.registrationRequirements.map((item, i) => (<ul key={i}><li>{item}</li></ul>)), membership.registrationForm)}>Register Account</Button>
+						</div>
 					</Card>
 				</Col >
 			)
@@ -145,6 +142,9 @@ const Products = () => {
 			<Membership
 				show={modalShow}
 				onHide={() => setModalShow(false)}
+				type={tempData[1]}
+				registrationRequirements={tempData[2]}
+				registrationForm={tempData[3]}
 			/>
 
 			<Heading title="Membership" />
@@ -153,7 +153,7 @@ const Products = () => {
 					It’s a requirement to be a legitimate member to qualify for loan products and
 					other privileges of the self-help group.
 				</p>
-				<Button onClick={() => setModalShow(true)}>Become a Member</Button>
+
 			</div>
 			{renderMembership()}
 			<Heading title="Loan Products" />

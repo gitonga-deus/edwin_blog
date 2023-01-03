@@ -167,19 +167,39 @@ const data = {
 			type: "Individuals Accounts",
 			icon: individual,
 			registrationForm: memberForm,
-			description: "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the self-help group."
+			description: "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the self-help group.",
+			registrationRequirements: [
+				"18 years & above.",
+				"Photocopy of National ID/ Passport.",
+				"Copy of KRA Pin Certificate.",
+				"2 copies of next of kins National ID/ Passport.",
+				"Registration fees."
+			]
 		},
 		{
 			type: "Corporate Accounts",
 			icon: corporate,
 			registrationForm: corporateForm,
-			description: "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the self-help group."
+			description: "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the self-help group.",
+			registrationRequirements: [
+				"Passport-size photo of signatories.",
+				"Photocopy of all signatories’ National ID/ Passport.",
+				"List of all group members.",
+				"Group by-laws/ constitution.",
+				"Copy of renewed registration certificate.",
+				"Minutes of the last meeting prior to registration."
+			]
 		},
 		{
 			type: "Minor Accounts",
 			icon: minor,
 			registrationForm: minorForm,
-			description: "This membership is granted to individuals who are below 18 years and are willing to save and borrow from the self-help group."
+			description: "This membership is granted to individuals who are below 18 years and are willing to save and borrow from the self-help group.",
+			registrationRequirements: [
+				"Passport-size photo of the minor and parent/ guardian.",
+				"Photocopy of parent/ guardian’s National ID/ Passport.",
+				"Photocopy of birth certificate/ birth notification/ baptism card."
+			]
 		}
 	],
 
@@ -208,29 +228,6 @@ const data = {
 	phoneNumber: "+254 710 273 227",
 	address: "P.O. Box 1107 - 00900",
 	location: "Kiambu",
-
-	individualMembership: [
-		"18 years & above.",
-		"Photocopy of National ID/ Passport.",
-		"Copy of KRA Pin Certificate.",
-		"2 copies of next of kin’s National ID/ Passport.",
-		"Registration fees."
-	],
-
-	corporateMembership: [
-		"Passport-size photo of signatories.",
-		"Photocopy of all signatories’ National ID/ Passport.",
-		"List of all group members.",
-		"Group by-laws/ constitution.",
-		"Copy of renewed registration certificate.",
-		"Minutes of the last meeting prior to registration."
-	],
-
-	minorMembership: [
-		"Passport-size photo of the minor and parent/ guardian.",
-		"Photocopy of parent/ guardian’s National ID/ Passport.",
-		"Photocopy of birth certificate/ birth notification/ baptism card."
-	]
 }
 
 export default data;
