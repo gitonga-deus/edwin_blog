@@ -22,10 +22,11 @@ const Membership = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					{props.type}
+					Registration Requirements
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
+				<h4>{props.type}</h4>
 				<span>
 					{props.registrationRequirements}
 				</span>
