@@ -209,11 +209,27 @@ const data = {
 	address: "P.O. Box 1107 - 00900",
 	location: "Kiambu",
 
-	membershipRequirements: [
-		"National I.D Card Copy",
-		"A copy of KRA PIN",
-		"A copy of Next of Kin National ID",
-		"Birth Certificate / Baptism Card for Minor Accounts."
+	individualMembership: [
+		"18 years & above.",
+		"Photocopy of National ID/ Passport.",
+		"Copy of KRA Pin Certificate.",
+		"2 copies of next of kin’s National ID/ Passport.",
+		"Registration fees."
+	],
+
+	corporateMembership: [
+		"Passport-size photo of signatories.",
+		"Photocopy of all signatories’ National ID/ Passport.",
+		"List of all group members.",
+		"Group by-laws/ constitution.",
+		"Copy of renewed registration certificate.",
+		"Minutes of the last meeting prior to registration."
+	],
+
+	minorMembership: [
+		"Passport-size photo of the minor and parent/ guardian.",
+		"Photocopy of parent/ guardian’s National ID/ Passport.",
+		"Photocopy of birth certificate/ birth notification/ baptism card."
 	]
 }
 

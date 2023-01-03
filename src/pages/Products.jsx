@@ -22,12 +22,24 @@ const Membership = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					Become a Member
+					Registration Requirements
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h4>Registration Requirements</h4>
-				{data.membershipRequirements.map((requirement, i) => (
+				<h4>Corporate Membership Account</h4>
+				{data.corporateMembership.map((requirement, i) => (
+					<ul key={i}>
+						<li>{requirement}</li>
+					</ul>
+				))}
+				<h4>Individual Membership Account</h4>
+				{data.individualMembership.map((requirement, i) => (
+					<ul key={i}>
+						<li>{requirement}</li>
+					</ul>
+				))}
+				<h4>Minor Membership Account</h4>
+				{data.minorMembership.map((requirement, i) => (
 					<ul key={i}>
 						<li>{requirement}</li>
 					</ul>
