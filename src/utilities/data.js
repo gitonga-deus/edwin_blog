@@ -22,9 +22,9 @@ import corporate from "../../assets/product/corporate.svg"
 import minor from "../../assets/product/minor.svg"
 
 // Membership Registration Forms
-import minorForm from "../../assets/docs/minor-reg-form.pdf"
-import memberForm from "../../assets/docs/member-reg-form.pdf"
-import corporateForm from "../../assets/docs/corporate-reg-form.pdf"
+import minorForm from "../../assets/docs/Minor-Registration-Form.pdf"
+import memberForm from "../../assets/docs/Member-Registration-Form.pdf"
+import corporateForm from "../../assets/docs/Corporate-Registration-Form.pdf"
 
 
 const data = {
