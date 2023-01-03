@@ -81,13 +81,16 @@ const Products = () => {
 			result.push(
 				<Col sm={12} md={12} lg={4} key={index} className="my-2 p-3 text-center">
 					<Card className="shadow" style={{
-						height: "300px"
+						height: "320px"
 					}}>
 						<div className="p-3 text-center">
 							<img src={membership.icon} alt={`${membership.type}`} height="65px" className="m-1" />
 						</div>
 						<h4 className="clr">{membership.type}</h4>
 						<p className="p-2">{membership.description}</p>
+						<a href={membership.registrationForm} target="_blank" rel="noopenner noreferrer">
+							<Button>Registration Form</Button>
+						</a>
 					</Card>
 				</Col >
 			)
