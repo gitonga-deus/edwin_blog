@@ -44,14 +44,14 @@ const Products = () => {
 	useDocumentTitle("Products - Githiga SHG")
 
 	const [modalShow, setModalShow] = useState(false);
-	
+
 	const { loanProducts, membershipProducts, paymentChannel } = data;
-	
+
 	const textInput = useRef(null);
 	const handleCopy = (id) => {
 		const el = paymentChannel.find(item => item.id === id);
 		navigator.clipboard.writeText(el.accountNumber).then(() => {
-			console.log(el.accountNumber)
+			alert(`Acc number copied successfully: ${el.accountNumber}`)
 		});
 	};
 
@@ -113,13 +113,11 @@ const Products = () => {
 						<InputGroup className="mb-3" style={{ width: "90%", margin: "0 auto" }}>
 							<Form.Control
 								value={`Account No: ${channel.accountNumber}`}
-								aria-label="Recipient's username"
-								ref={textInput}
-								aria-describedby="basic-addon2"
-								disabled
+								aria-label="Recipient's username" ref={textInput}
+								aria-describedby="basic-addon2" disabled
 								style={{ borderRadius: "2px", backgroundColor: "#ffffff" }}
 							/>
-							<Button style={{ borderRadius: "2px" }} onClick={() => handleCopy(channel.id)}>
+							<Button onClick={() => handleCopy(channel.id)}>
 								Copy
 							</Button>
 						</InputGroup>
