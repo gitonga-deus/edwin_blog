@@ -133,32 +133,32 @@ const data = {
 		{
 			loanType: "Development Loan",
 			icon: loan,
-			description: "This is an all-purpose loan granted to all members individually or corporates to finance development projects"
+			description: "This is an all-purpose loan granted to all members individually or corporates to finance development projects."
 		},
 		{
 			loanType: "Emergency Loan",
 			icon: loan,
-			description: "This is a loan that is granted to members to finance emergency needs e.g sickness, natural disasters, or accidents"
+			description: "This is a loan that is granted to members to finance emergency needs."
 		},
 		{
 			loanType: "Education Loan",
 			icon: loan,
-			description: "This is a loan that is granted to members to finance education needs e.g tuition fees, books and related expenses"
+			description: "This is a loan that is granted to members to finance education needs."
 		},
 		{
 			loanType: "Business Loan",
 			icon: loan,
-			description: "This loan product is designed to finance trading activities. The loan shall be advanced to ongoing businesses only"
+			description: "This loan product is designed to finance trading activities."
 		},
 		{
 			loanType: "Agribusiness Loan",
 			icon: loan,
-			description: "This is a loan that is granted for agricultural purposes aimed at promoting agriculture for food security, improved livelihoods."
+			description: "This is a loan that is granted for agricultural purposes aimed at promoting agriculture for food security and improved livelihoods."
 		},
 		{
 			loanType: "Church Loan",
 			icon: loan,
-			description: "This loan is granted to Catholic Churches only through the Parish pastoral."
+			description: "This loan is granted to churches."
 		},
 	],
 
