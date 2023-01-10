@@ -9,10 +9,6 @@ import peter from "../../assets/team/Peter.jpg"
 import ngure from "../../assets/team/Ngure.jpg"
 import john from "../../assets/team/John.jpg"
 
-// Slider Images
-import slider1 from "../../assets/slider-img/church-image.jpg";
-import slider2 from "../../assets/slider-img/management-team.jpg";
-
 // Home Icons
 import mission from "../../assets/home/mission.svg";
 import vision from "../../assets/home/vision.svg";
@@ -225,17 +221,6 @@ const data = {
 			name: "KCB",
 			icon: mode,
 			accountNumber: "1101918799"
-		}
-	],
-
-	slider: [
-		{
-			img: slider1,
-			alt: "Church Image"
-		},
-		{
-			img: slider2,
-			alt: "Management Team"
 		}
 	],
 
