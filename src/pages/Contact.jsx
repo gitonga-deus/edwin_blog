@@ -85,7 +85,7 @@ const Contact = () => {
 							<h3 className="d-flex align-items-center">
 								<SlLocationPin /> <span style={{ marginLeft: "10px" }} >Office</span>
 							</h3>
-							<p>We are located at: <br /> {address}, <br /> {location}. </p>
+							<p>We are located at: <br /> Githiga, Kiambu </p>
 						</div>
 						<div className="p-3">
 							<h3 className="d-flex align-items-center">
