@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
 
 
-import churchImage from "../../assets/slider-img/church-image1.png";
+import churchImage from "../../assets/slider-img/church-image.png";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
