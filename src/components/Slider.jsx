@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Carousel, Row } from 'react-bootstrap';
 
 
-import churchImage from "../../assets/slider-img/church-image.jpg";
+import churchImage from "../../assets/slider-img/church-image1.png";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
@@ -19,7 +19,7 @@ const Slider = () => {
 						<img
 							className="d-block w-100 img-fluid"
 							src={img}
-							style={{ borderRadius: "10px", objectFit: "cover", height: "490px" }}
+							style={{ borderRadius: "10px", objectFit: "cover", height: "420px" }}
 							alt="Church Image"
 						/>
 						<Carousel.Caption>
