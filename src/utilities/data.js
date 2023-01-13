@@ -166,9 +166,9 @@ const data = {
 		{
 			type: "Individuals Accounts",
 			icon: individual,
-			registrationForm: memberForm,
+			form: memberForm,
 			description: "This membership is granted to individuals who are 18 years and above and are willing to save and borrow from the self-help group.",
-			registrationRequirements: [
+			requirements: [
 				"18 years & above.",
 				"Photocopy of National ID/ Passport.",
 				"Copy of KRA Pin Certificate.",
@@ -179,9 +179,9 @@ const data = {
 		{
 			type: "Corporate Accounts",
 			icon: corporate,
-			registrationForm: corporateForm,
+			form: corporateForm,
 			description: "This membership is granted to organizations, companies, and institutions that are willing to save and borrow from the self-help group.",
-			registrationRequirements: [
+			requirements: [
 				"Passport-size photo of signatories.",
 				"Photocopy of all signatories’ National ID/ Passport.",
 				"List of all group members.",
@@ -193,9 +193,9 @@ const data = {
 		{
 			type: "Minor Accounts",
 			icon: minor,
-			registrationForm: minorForm,
+			form: minorForm,
 			description: "This membership is granted to individuals who are below 18 years and are willing to save and borrow from the self-help group.",
-			registrationRequirements: [
+			requirements: [
 				"Passport-size photo of the minor and parent/ guardian.",
 				"Photocopy of parent/ guardian’s National ID/ Passport.",
 				"Photocopy of birth certificate/ birth notification/ baptism card."
@@ -205,22 +205,22 @@ const data = {
 
 	paymentChannel: [
 		{
-			id: 1,
 			name: "GDC",
 			icon: mode,
-			accountNumber: "120008000700"
+			account: "GDC2433",
+			paybill: "639498"
 		},
 		{
-			id: 2,
 			name: "Caritas MFB",
 			icon: mode,
-			accountNumber: "1002025000057"
+			account: "1002025000057",
+			paybill: "899790",
 		},
 		{
-			id: 3,
-			name: "KCB",
+			name: "KCB Bank",
 			icon: mode,
-			accountNumber: "1101918799"
+			account: "1101918799",
+			paybill: "522522"
 		}
 	],
 
