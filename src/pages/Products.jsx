@@ -1,10 +1,10 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 // React Bootstrap
-import { Col, Row, Card, Button, Modal, InputGroup, Form } from "react-bootstrap";
+import { Col, Row, Card, Button } from "react-bootstrap";
 
 // Components
-import { Heading } from "../components";
+import { Heading, MembershipModal, LipaNaMpesa } from "../components";
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
@@ -12,57 +12,34 @@ import useDocumentTitle from "../utilities/useDocumentTitle";
 // Products Data
 import data from "../utilities/data";
 
-const Membership = (props) => {
-	return (
-		<Modal
-			{...props}
-			size="lg"
-			aria-labelledby="contained-modal-title-vcenter"
-			centered
-		>
-			<Modal.Header closeButton>
-				<Modal.Title id="contained-modal-title-vcenter">
-					Registration Requirements
-				</Modal.Title>
-			</Modal.Header>
-			<Modal.Body>
-				<h4>{props.type}</h4>
-				<span>
-					{props.registrationRequirements}
-				</span>
-				<a href={props.registrationForm} target="_blank" rel="noopener noreferrer">
-					<Button>Download Registration Form</Button>
-				</a>
-			</Modal.Body>
-			<Modal.Footer>
-				<Button onClick={props.onHide}>Close</Button>
-			</Modal.Footer>
-		</Modal>
-	);
-}
-
 const Products = () => {
 	useDocumentTitle("Products - Githiga SHG")
 
-	const [modalShow, setModalShow] = useState(false);
-	const [tempData, setTempData] = useState([])
+	// Membership Modal
+	const [membershipModalShow, setMembershipModalShow] = useState(false);
+	const [membershipData, setMembershipData] = useState([]);
 
+	// Payment Modal
+	const [paymentModalShow, setPaymentModalShow] = useState(false);
+	const [paymentData, setPaymentData] = useState([]);
+
+	// Destructure Data
 	const { loanProducts, membershipProducts, paymentChannel } = data;
 
-	const textInput = useRef(null);
-	const handleCopy = (id) => {
-		const el = paymentChannel.find(item => item.id === id);
-		navigator.clipboard.writeText(el.accountNumber).then(() => {
-			alert(`Acc number copied successfully: ${el.accountNumber}`)
-		});
-	};
+	const handleMembershipModal = (type, requirements, form) => {
+		let membershipData = [type, requirements, form];
 
-	const getData = (type, registrationRequirements, registrationForm) => {
-		let tempData = [type, registrationRequirements, registrationForm];
+		setMembershipData(item => [1, ...membershipData]);
 
-		setTempData(item => [1, ...tempData]);
+		return setMembershipModalShow(true)
+	}
 
-		return setModalShow(true)
+	const handleMpesa = (name, paybill, account) => {
+		let paymentData = [name, paybill, account];
+
+		setPaymentData(item => [1, ...paymentData]);
+
+		return setPaymentModalShow(true)
 	}
 
 	const renderLoan = () => {
@@ -80,8 +57,9 @@ const Products = () => {
 						<p className="p-2">{loan.description}</p>
 					</Card>
 				</Col >
-			)
-		})
+			);
+		});
+
 		return result;
 	};
 
@@ -99,12 +77,23 @@ const Products = () => {
 						<h4 className="clr">{membership.type}</h4>
 						<p className="p-2">{membership.description}</p>
 						<div>
-							<Button onClick={() => getData(membership.type, membership.registrationRequirements.map((item, i) => (<ul key={i}><li>{item}</li></ul>)), membership.registrationForm)}>Register Account</Button>
+							<Button
+								onClick={() => handleMembershipModal(membership.type, membership.requirements.map((
+									item, index
+								) => (
+									<ul key={index}>
+										<li>{item}</li>
+									</ul>
+								)), membership.form)}
+							>
+								Register Account
+							</Button>
 						</div>
 					</Card>
 				</Col >
 			)
 		});
+
 		return result;
 	}
 
@@ -112,25 +101,17 @@ const Products = () => {
 		let result = [];
 		paymentChannel.map((channel, index) => {
 			result.push(
-				<Col className="my-4 py-2 text-center" sm={12} md={12} lg={4} key={index}>
+				<Col className="my-2 p-3 text-center" sm={12} md={12} lg={4} key={index}>
 					<Card className="shadow" style={{
-						height: "auto"
+						height: "200px"
 					}}>
 						<div className="p-3">
 							<img src={channel.icon} alt={`${channel.name}`} height="60px" className="m-1" />
 						</div>
 						<h4 className="clr">{channel.name}</h4>
-						<InputGroup className="mb-3" style={{ width: "90%", margin: "0 auto" }}>
-							<Form.Control
-								value={`Account No: ${channel.accountNumber}`}
-								aria-label="Recipient's username" ref={textInput}
-								aria-describedby="basic-addon2" disabled
-								style={{ borderRadius: "2px", backgroundColor: "#ffffff" }}
-							/>
-							<Button onClick={() => handleCopy(channel.id)}>
-								Copy
-							</Button>
-						</InputGroup>
+						<div>
+							<Button onClick={() => handleMpesa(channel.name, channel.account, channel.paybill)}>More</Button>
+						</div>
 					</Card>
 				</Col>
 			)
@@ -140,18 +121,26 @@ const Products = () => {
 
 	return (
 		<Row>
-			<Membership
-				show={modalShow}
-				onHide={() => setModalShow(false)}
-				type={tempData[1]}
-				registrationRequirements={tempData[2]}
-				registrationForm={tempData[3]}
+			<MembershipModal
+				show={membershipModalShow}
+				onHide={() => setMembershipModalShow(false)}
+				type={membershipData[1]}
+				requirements={membershipData[2]}
+				form={membershipData[3]}
+			/>
+
+			<LipaNaMpesa
+				show={paymentModalShow}
+				onHide={() => setPaymentModalShow(false)}
+				name={paymentData[1]}
+				account={paymentData[2]}
+				paybill={paymentData[3]}
 			/>
 
 			<Heading title="Membership" />
 			<div className="text-center">
 				<p>
-					It’s a requirement to be a legitimate member to qualify for loan products and
+					It's a requirement to be a legitimate member to qualify for loan products and
 					other privileges of the self-help group.
 				</p>
 
