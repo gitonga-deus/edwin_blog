@@ -35,15 +35,15 @@ const data = {
 		"Membership is drawn from all regions, including the Diaspora making the best use of technology."
 	],
 	personData: [
-		{
-			name: "Henry Kiritu",
-			position: "Patron",
-			image: henry,
-			phoneNumber: "--",
-			emailAddress: "--",
-			bio: "Fr. Henry Kiritu is the patron of the Self Help Group as enshrined in the guideline, being the parish priest.The patron plays a crucial role in the management by	maintaining the Catholic faith tradition.In particular, he gives spiritual nourishment and guidance to ensure harmony in the entire governance ecosystem."
+		// {
+		// 	name: "Henry Kiritu",
+		// 	position: "Patron",
+		// 	image: henry,
+		// 	phoneNumber: "--",
+		// 	emailAddress: "--",
+		// 	bio: "Fr. Henry Kiritu is the patron of the Self Help Group as enshrined in the guideline, being the parish priest.The patron plays a crucial role in the management by	maintaining the Catholic faith tradition.In particular, he gives spiritual nourishment and guidance to ensure harmony in the entire governance ecosystem."
 
-		},
+		// },
 		{
 			name: "James Makena Wanyangi",
 			position: "Chairman",
@@ -69,13 +69,21 @@ const data = {
 			bio: "As the treasurer, she is the custodian of all group's assets. She also chairs the Finance & Budget Committee. She holds a Diploma in Clearing & Forwarding and has also done 10 Computer Packages."
 		},
 		{
-			name: "Esther Njeri Kinyuru",
+			name: "Peter Mbugua Matiru",
 			position: "Secretary",
-			phoneNumber: "--",
-			emailAddress: "--",
-			image: esther,
-			bio: "As the secretary, Esther writes and documents all the group's deliberations and resolutions. She also chairs the Risk, Audit & Compliance. She holds a Diploma in Early Childhood Development. Currently a full-time ECD Teacher."
+			phoneNumber: "0727525648",
+			emailAddress: "petrinel2012@gmail.com",
+			image: peter,
+			bio: "He is the secretary of the group and the Finance & Budget Committee as well as a member of the Risk, Audit & Compliance Committee. As the secretary, he writes and documents all the group's deliberations and resolutions. Peter holds a Bachelor's Degree in Philosophy and a Certificate in Teaching."
 		},
+		// {
+		// 	name: "Esther Njeri Kinyuru",
+		// 	position: "Secretary",
+		// 	phoneNumber: "--",
+		// 	emailAddress: "--",
+		// 	image: esther,
+		// 	bio: "As the secretary, Esther writes and documents all the group's deliberations and resolutions. She also chairs the Risk, Audit & Compliance. She holds a Diploma in Early Childhood Development. Currently a full-time ECD Teacher."
+		// },
 		{
 			name: "Samuel Kanini Kamau",
 			position: "Accountant",
@@ -84,14 +92,6 @@ const data = {
 			image: kanini,
 			bio: "Samuel manages the group operations, including but not limited to financial management, group promotion and marketing and customer care service. He is also the liaison between members and the management committee. He holds a CPA-K."
 
-		},
-		{
-			name: "Peter Mbugua Matiru",
-			position: "Member",
-			phoneNumber: "0727525648",
-			emailAddress: "petrinel2012@gmail.com",
-			image: peter,
-			bio: "He is the secretary of the Finance & Budget Committee as well as a member of the Risk, Audit & Compliance Committee. Peter holds a Bachelor's Degree in Philosophy and a Certificate in Teaching."
 		},
 		{
 			name: "Samuel Ngure Mburu",
