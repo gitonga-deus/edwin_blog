@@ -40,6 +40,10 @@ const Events = () => {
 			.catch(console.error);
 	}, []);
 
+	const truncate = (str) => {
+		return str.length > 10 ? str.substring(0, 23) + "..." : str;
+	}
+
 	return (
 		<Row>
 			<Heading title="Events" />
@@ -56,7 +60,7 @@ const Events = () => {
 								/>
 							</span>
 							<span className="text-center text-black events-title">
-								<h5>{event.title}</h5>
+								<h5>{truncate(event.title)}</h5>
 								<p>{handleTimeStamp(event.publishedAt)}</p>
 							</span>
 						</Link>

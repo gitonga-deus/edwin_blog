@@ -225,7 +225,7 @@ const data = {
 	],
 
 	emailAddress: "shg@githiga.caritasnairobishp.org",
-	phoneNumber: "+254 710 273 227",
+	phoneNumber: "+254 110 273 227",
 	address: "P.O. Box 1107 - 00900",
 	location: "Kiambu"
 }
