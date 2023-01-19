@@ -2,7 +2,7 @@
 import { Row, Col } from "react-bootstrap";
 
 // Components
-import { Heading, Slider } from "../components";
+import { Heading } from "../components";
 
 // Utilities Functions
 import useDocumentTitle from "../utilities/useDocumentTitle";
@@ -13,13 +13,18 @@ import data from "../utilities/data";
 const Home = () => {
 	useDocumentTitle("Home - Githiga SHG");
 
-	const { homeIcons, homeData } = data
+	const { homeIcons, homeData, heroImg } = data
 	return (
 		<Row>
 			<Heading title="Welcome to St. John Evangelist Githiga Catholic Church Self-Help Group" />
 
 			<div className="py-1">
-				<Slider />
+				<img
+					className="d-block w-100 img-fluid"
+					src={heroImg}
+					style={{ borderRadius: "5px", objectFit: "cover", height: "410px" }}
+					alt="Church Image"
+				/>
 			</div>
 
 			<Heading title="Who are We" />

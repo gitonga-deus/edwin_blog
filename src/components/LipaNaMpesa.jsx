@@ -12,13 +12,13 @@ const LipaNaMpesa = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					{props.name} - Lipa Na Mpesa
+					{props.name} - Lipa Na M-PESA
 				</Modal.Title>
 			</Modal.Header>
 			
 			<Modal.Body className="text-center">
 				<div>
-					<h5>Lipa Na Mpesa</h5>
+					<h5>Lipa Na M-PESA</h5>
 					<img src={arrowDown} height="30px" />
 				</div>
 				<div>
@@ -34,7 +34,7 @@ const LipaNaMpesa = (props) => {
 					<img src={arrowDown} height="30px" />
 				</div>
 				<div>
-					<p>Enter M-pesa Pin</p>
+					<p>Enter M-PESA Pin</p>
 					<img src={arrowDown} height="30px" />
 				</div>
 				<h5>

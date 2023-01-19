@@ -1,6 +1,4 @@
 // Members
-import henry from "../../assets/team/placeholder_male.jpg"
-import esther from "../../assets/team/placeholder_female.jpg"
 import james from "../../assets/team/James.jpg"
 import kennedy from "../../assets/team/Kennedy.jpg"
 import hannah from "../../assets/team/Hannah.jpg"
@@ -13,6 +11,9 @@ import john from "../../assets/team/John.jpg"
 import mission from "../../assets/home/mission.svg";
 import vision from "../../assets/home/vision.svg";
 import value from "../../assets/home/value.svg";
+
+// Hero Image
+import churchImage from "../../assets/slider-img/hero-edited.png";
 
 // Product Icons
 import loan from "../../assets/product/loan.svg"
@@ -224,6 +225,7 @@ const data = {
 		}
 	],
 
+	heroImg: churchImage,
 	emailAddress: "shg@githiga.caritasnairobishp.org",
 	phoneNumber: "+254 110 273 227",
 	address: "P.O. Box 1107 - 00900",

@@ -110,7 +110,9 @@ const Products = () => {
 						</div>
 						<h4 className="clr">{channel.name}</h4>
 						<div>
-							<Button onClick={() => handleMpesa(channel.name, channel.account, channel.paybill)}>More</Button>
+							<Button onClick={() => handleMpesa(channel.name, channel.account, channel.paybill)}>
+								View Payment Process
+							</Button>
 						</div>
 					</Card>
 				</Col>
