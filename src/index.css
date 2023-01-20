@@ -116,3 +116,17 @@ a {
 .maroon-gradient {
 	background: #661111
 }
+
+.gmap_canvas {
+	overflow: hidden;
+	background: none !important;
+	height: auto;
+	width: 100%;
+}
+
+.map {
+	position: relative;
+	text-align: right;
+	height: auto;
+	width: 100%;
+}

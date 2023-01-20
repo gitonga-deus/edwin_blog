@@ -4,3 +4,4 @@ export { default as Heading } from "./Heading";
 export { default as Person } from "./Person";
 export { default as MembershipModal } from "./MembershipModal";
 export { default as LipaNaMpesa } from "./LipaNaMpesa";
+export { default as Map } from "./Map";

@@ -27,6 +27,11 @@ import minorForm from "../../assets/docs/Minor-Registration-Form.pdf"
 import memberForm from "../../assets/docs/Member-Registration-Form.pdf"
 import corporateForm from "../../assets/docs/Corporate-Registration-Form.pdf"
 
+// Contact Icons
+import phone from "../../assets/contact/phone.svg"
+import chat from "../../assets/contact/chat.svg"
+import location from "../../assets/contact/location_pin.svg"
+
 
 const data = {
 	homeData: [
@@ -225,11 +230,25 @@ const data = {
 		}
 	],
 
+	contact: [
+		{
+			icon: chat,
+			desc: "Group Email",
+			text: "shg@githiga.caritasnairobishp.org"
+		},
+		{
+			icon: location,
+			desc: "Located At",
+			text: "Githiga, Kiambu"
+		},
+		{
+			icon: phone,
+			desc: "Office Phone Number",
+			text: "+254 110 273 227"
+		}
+	],
+
 	heroImg: churchImage,
-	emailAddress: "shg@githiga.caritasnairobishp.org",
-	phoneNumber: "+254 110 273 227",
-	address: "P.O. Box 1107 - 00900",
-	location: "Kiambu"
 }
 
 export default data;
