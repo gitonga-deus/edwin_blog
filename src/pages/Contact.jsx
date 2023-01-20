@@ -55,27 +55,23 @@ const Contact = () => {
 
 	return (
 		<>
-			<Heading title="Our friendly team is here to help you" />
+			<Heading title="Get in Touch" />
 			<Row className="py-3">
 				{contact.map((item, index) => (
 					<Col className="my-1 text-center" sm={12} md={4} lg={4} key={index}>
 						<div className="p-3">
 							<img src={item.icon} alt="" height="50px" />
-							<h5 className="p-3">{item.desc}</h5>
+							<h5 className="p-3">{item.title}</h5>
 							<p>{item.text}</p>
 						</div>
 					</Col>
 				))}
 			</Row>
 
-			<Heading title="Get in Touch" />
 			<Row style={{
 				borderRadius: "5px",
 				border: "2px solid #661111",
 			}}>
-				<Col sm={12} lg={6} md={12} className="p-3">
-					<Map />
-				</Col>
 				<Col sm={12} lg={6} md={12}>
 					<Form onSubmit={sendEmail} className="py-3">
 						<Form.Group className="mb-1 py-1" controlId="formBasicFullName">
@@ -114,6 +110,9 @@ const Contact = () => {
 							Send Message
 						</Button>
 					</Form>
+				</Col>
+				<Col sm={12} lg={6} md={12} className="p-2">
+					<Map />
 				</Col>
 			</Row>
 		</>

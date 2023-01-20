@@ -233,17 +233,17 @@ const data = {
 	contact: [
 		{
 			icon: chat,
-			desc: "Group Email",
+			title: "Group Email",
 			text: "shg@githiga.caritasnairobishp.org"
 		},
 		{
 			icon: location,
-			desc: "Located At",
+			title: "Physical Location",
 			text: "Githiga, Kiambu"
 		},
 		{
 			icon: phone,
-			desc: "Office Phone Number",
+			title: "Office Phone Number",
 			text: "+254 110 273 227"
 		}
 	],

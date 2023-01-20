@@ -149,11 +149,6 @@ const Products = () => {
 			</div>
 			{renderMembership()}
 			<Heading title="Loan Products" />
-			<div className="text-center">
-				<p>
-					Members are entitled to different loans but will limited to only one type of loan product at any given time.
-				</p>
-			</div>
 			{renderLoan()}
 			<Heading title="Payment Channels" />
 			{renderPaymentChannel()}
