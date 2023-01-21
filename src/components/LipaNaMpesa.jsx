@@ -12,7 +12,7 @@ const LipaNaMpesa = (props) => {
 		>
 			<Modal.Header closeButton>
 				<Modal.Title id="contained-modal-title-vcenter">
-					{props.name} - Lipa Na M-PESA
+					{props.name}
 				</Modal.Title>
 			</Modal.Header>
 			
@@ -22,7 +22,7 @@ const LipaNaMpesa = (props) => {
 					<img src={arrowDown} height="30px" />
 				</div>
 				<div>
-					<p>Paybill Business Number: {props.paybill}</p>
+					<p>Paybill Number: {props.paybill}</p>
 					<img src={arrowDown} height="30px" />
 				</div>
 				<div>

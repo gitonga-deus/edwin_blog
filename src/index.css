@@ -1,5 +1,4 @@
-/* @import url('https://fonts.cdnfonts.com/css/trebuchet-ms-2'); */
-
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Rubik:400,500,600,700");
 @import url('https://fonts.cdnfonts.com/css/dm-sans');
 
 html,
@@ -8,7 +7,6 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 	color: #000;
-	/* font-family: 'Trebuchet MS', sans-serif; */
 	font-family: 'DM Sans', sans-serif;
 	font-size: 15px;
 	line-height: 30px;
@@ -129,4 +127,16 @@ a {
 	text-align: right;
 	height: auto;
 	width: 100%;
+}
+
+.item-text {
+	font-family: "Rubik", sans-serif;
+	font-size: "12px";
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+.footer {
+	font-family: "Rubik", sans-serif;
+	font-weight: 400;
 }

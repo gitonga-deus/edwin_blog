@@ -4,7 +4,7 @@ const Footer = () => {
 			backgroundColor: "#661111",
 			fontSize: "15px",
 			height: "80px",
-			alignItems: "center"
+			alignItems: "center",
 		}}>
 			<p style={{
 				verticalAlign: "middle",

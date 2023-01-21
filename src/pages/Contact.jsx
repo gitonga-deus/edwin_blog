@@ -60,9 +60,9 @@ const Contact = () => {
 				{contact.map((item, index) => (
 					<Col className="my-1 text-center" sm={12} md={6} lg={3} key={index}>
 						<div className="p-3">
-							<img src={item.icon} alt="" height="50px" />
-							<h5 className="p-3">{item.title}</h5>
-							<p>{item.text}</p>
+							<img src={item.icon} alt="" height="40px" />
+							<h5 className="p-2">{item.title}</h5>
+							<p className="item-text">{item.text}</p>
 						</div>
 					</Col>
 				))}

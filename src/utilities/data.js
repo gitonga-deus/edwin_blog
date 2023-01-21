@@ -228,6 +228,12 @@ const data = {
 			icon: mode,
 			account: "1101918799",
 			paybill: "522522"
+		},
+		{
+			name: "M-Pesa",
+			icon: mode,
+			account: "Membership Number",
+			paybill: "4107189"
 		}
 	],
 

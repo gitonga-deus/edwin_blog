@@ -97,11 +97,11 @@ const Products = () => {
 		return result;
 	}
 
-	const renderPaymentChannel = () => {
+	const renderPayment = () => {
 		let result = [];
 		paymentChannel.map((channel, index) => {
 			result.push(
-				<Col className="my-2 p-3 text-center" sm={12} md={12} lg={4} key={index}>
+				<Col className="my-2 p-3 text-center" sm={12} md={12} lg={3} key={index}>
 					<Card className="shadow" style={{
 						height: "200px"
 					}}>
@@ -151,7 +151,7 @@ const Products = () => {
 			<Heading title="Loan Products" />
 			{renderLoan()}
 			<Heading title="Payment Channels" />
-			{renderPaymentChannel()}
+			{renderPayment()}
 		</Row>
 	)
 }
