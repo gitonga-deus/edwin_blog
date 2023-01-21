@@ -58,7 +58,7 @@ const Contact = () => {
 			<Heading title="Get in Touch" />
 			<Row className="py-3">
 				{contact.map((item, index) => (
-					<Col className="my-1 text-center" sm={12} md={4} lg={4} key={index}>
+					<Col className="my-1 text-center" sm={12} md={6} lg={3} key={index}>
 						<div className="p-3">
 							<img src={item.icon} alt="" height="50px" />
 							<h5 className="p-3">{item.title}</h5>

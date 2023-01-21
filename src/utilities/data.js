@@ -30,6 +30,7 @@ import corporateForm from "../../assets/docs/Corporate-Registration-Form.pdf"
 // Contact Icons
 import phone from "../../assets/contact/phone.svg"
 import chat from "../../assets/contact/chat.svg"
+import box_office from "../../assets/contact/box_office.svg"
 import location from "../../assets/contact/location_pin.svg"
 
 
@@ -240,6 +241,11 @@ const data = {
 			icon: location,
 			title: "Physical Location",
 			text: "Githiga, Kiambu"
+		},
+		{
+			icon: box_office,
+			title: "Postal Address",
+			text: "1107 - 00900 Kiambu"
 		},
 		{
 			icon: phone,
