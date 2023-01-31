@@ -8,7 +8,7 @@ const Navigation = () => {
 	return (
 		<Navbar collapseOnSelect expand="lg">
 			<Container>
-				<Navbar.Brand href="#home">
+				<Navbar.Brand href="/">
 					<img src={logo} alt="Githiga SHG" />
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
