@@ -7,7 +7,12 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			
+			colors: {
+				'edwin-bg': 'var(--edwin-bg',
+
+				'accent-1': 'var(--accent-1)',
+				'accent-2': 'var(--accent-2)'
+			}
 		},
 	},
 	plugins: [],
